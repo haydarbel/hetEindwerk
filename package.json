@@ -1,0 +1,22 @@
+{
+  "name": "heteindwerk",
+  "version": "1.0.0",
+  "description": "Fake REST API voor testen",
+  "main": "index.js",
+  "scripts": {
+    "json:server": "json-server --watch vsa.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haydarbel/hetEindwerk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haydarbel/hetEindwerk/issues"
+  },
+  "homepage": "https://github.com/haydarbel/hetEindwerk#readme",
+  "dependencies": {
+    "json-server": "^0.16.1"
+  }
+}

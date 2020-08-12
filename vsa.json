@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "gebruikers": [
+    {
+      "id": 1,
+      "login": "vsa.haydar@gmail.com",
+      "wachtwoord": "vsaHeverlee"
+    },
+    {
+      "id": 2,
+      "login": "vsa.haydar@gmail.com",
+      "wachtwoord": "vsaHeverlee"
+    },
+    {
+      "login": "vsa.haar@gmail.com",
+      "wachtwoord": "vsaHerlee",
+      "id": 3
+    },
+    {
+      "login": "jjjj",
+      "wachtwoord": "hhhh",
+      "id": 4
+    },
+    {
+      "login": "ali",
+      "wachtwoord": "Salik",
+      "id": 5
+    },
+    {
+      "login": "haydar",
+      "wachtwoord": "ssss",
+      "id": 6
+    },
+    {
+      "login": "isa",
+      "wachtwoord": "koktas",
+      "id": 7
+    }
+  ]
+}
