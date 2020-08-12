@@ -6,16 +6,15 @@
       "author": "typicode"
     }
   ],
-  "comments": [
+
+  "Products": [
     {
       "id": 1,
       "body": "some comment",
       "postId": 1
     }
   ],
-  "profile": {
-    "name": "typicode"
-  },
+ 
   "gebruikers": [
     {
       "id": 1,
@@ -51,6 +50,11 @@
       "login": "isa",
       "wachtwoord": "koktas",
       "id": 7
+    },
+    {
+      "login": "suleyman",
+      "wachtwoord": "resit",
+      "id": 8
     }
   ]
 }

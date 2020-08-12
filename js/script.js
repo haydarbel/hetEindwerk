@@ -24,9 +24,29 @@ if((newGebruiker.login.length!==0 && newGebruiker.wachtwoord.length!==0)&& newGe
 });
 
 
-
-
-
+// Validation
+document.getElementById('logIn').addEventListener('click',function(){
+  let sEmail=document.getElementById('modalLRInput10');
+  let sWachtwoord=document.getElementById('modalLRInput11');
+  let url='http://localhost:3000/gebruikers'
+  req=new XMLHttpRequest();
+  req.open("GET",url,true);
+  req.send();
+  req.onload=function(){
+  let gebruikers=JSON.parse(req.responseText);
+  if(gebruikers.find(item=>{
+     return item.login==sEmail.value && item.wachtwoord==sWachtwoord.value  
+  })){
+    sEmail.value='';
+    sWachtwoord.value='';
+    // window.location = "index2.html";
+  }else{
+    sEmail.value='';
+    sWachtwoord.value='';
+    alert('Eerst moet u een account maken!')
+  }
+  }
+  });
 
 
 
