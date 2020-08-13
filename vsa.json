@@ -6,7 +6,6 @@
       "author": "typicode"
     }
   ],
-
   "Products": [
     {
       "id": 1,
@@ -14,7 +13,6 @@
       "postId": 1
     }
   ],
- 
   "gebruikers": [
     {
       "id": 1,
@@ -32,29 +30,24 @@
       "id": 3
     },
     {
-      "login": "jjjj",
-      "wachtwoord": "hhhh",
+      "login": "vsa.haydar@live.com",
+      "wachtwoord": "1234",
       "id": 4
     },
     {
-      "login": "ali",
-      "wachtwoord": "Salik",
+      "login": "aaaa",
+      "wachtwoord": "zzzz",
       "id": 5
     },
     {
-      "login": "haydar",
-      "wachtwoord": "ssss",
+      "login": "haydar@live.com",
+      "wachtwoord": "1234",
       "id": 6
     },
     {
-      "login": "isa",
-      "wachtwoord": "koktas",
+      "login": "haydar@gmail.com",
+      "wachtwoord": "Ayse",
       "id": 7
-    },
-    {
-      "login": "suleyman",
-      "wachtwoord": "resit",
-      "id": 8
     }
   ]
 }

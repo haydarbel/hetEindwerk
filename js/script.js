@@ -1,30 +1,32 @@
 
 //Account Aanmaken 
 document.getElementById("signUp").addEventListener('click',function (){
-let sEmail=document.getElementById('modalLRInput12').value
-let sWachtwoord=document.getElementById('modalLRInput13').value;
-let sHerWachtwoord=document.getElementById('modalLRInput14').value;
+  // debugger
+let sEmail=document.getElementById('modalLRInput12');
+let sWachtwoord=document.getElementById('modalLRInput13');
+let sHerWachtwoord=document.getElementById('modalLRInput14');
 let url='http://localhost:3000/gebruikers'
 let newGebruiker={
-  login: sEmail,
-  wachtwoord:sWachtwoord,
+  login: sEmail.value,
+  wachtwoord:sWachtwoord.value,
 }
-if((newGebruiker.login.length!==0 && newGebruiker.wachtwoord.length!==0)&& newGebruiker.wachtwoord ===sHerWachtwoord){
+if((newGebruiker.login.length!==0 && newGebruiker.wachtwoord.length!==0)&& newGebruiker.wachtwoord ===sHerWachtwoord.value){
    const xhr = new XMLHttpRequest();
    xhr.open('POST', url, true);
    xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-   xhr.onreadystatechange = function () {
+   xhr.onreadystatechange = ()=> {
      if (xhr.readyState === 4 && xhr.status === 201){
-       const serverResponse = JSON.parse(xhr.response);
+       let serverResponse = JSON.parse(xhr.response);
        console.log(serverResponse)
      }
    };
    xhr.send(JSON.stringify(newGebruiker));
   }
+  sEmail.value=''
 });
 
 
-// Validation
+//Validation 
 document.getElementById('logIn').addEventListener('click',function(){
   let sEmail=document.getElementById('modalLRInput10');
   let sWachtwoord=document.getElementById('modalLRInput11');
