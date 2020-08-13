@@ -23,7 +23,9 @@
     margin-top: 50px;
     margin-bottom: 50px;
 }
-
+#herendiv{
+    max-width: 1200px;
+}
 #carousel-example-1z {
     margin-top: 50px;
 }
