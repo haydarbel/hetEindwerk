@@ -41,7 +41,8 @@ document.getElementById('logIn').addEventListener('click',function(){
   })){
     sEmail.value='';
     sWachtwoord.value='';
-    // window.location = "index2.html";
+    //window.location = "index.html";
+    document.getElementById('lgn').innerHTML='Hosgeldiniz'
   }else{
     sEmail.value='';
     sWachtwoord.value='';
@@ -50,7 +51,14 @@ document.getElementById('logIn').addEventListener('click',function(){
   }
   });
 
-
+  //resim zoom
+  new Drift(document.querySelector('.drift-demo-trigger'), {
+    paneContainer: document.querySelector('.details'),
+    inlinePane: 700,
+    inlineOffsetY: -15,
+    containInline: true,
+    hoverBoundingBox: true
+  });
 
 
 
