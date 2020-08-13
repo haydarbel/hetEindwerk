@@ -12,6 +12,8 @@
 #herenimg img {
     height: 420px;
     width: 500px;
+    background-size: cover;
+    
 }
 
 #herencards {    /* ?? */
@@ -22,6 +24,10 @@
 #damesdiv {
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+#herendiv {
+ max-width: 1200px;
 }
 
 #carousel-example-1z {
