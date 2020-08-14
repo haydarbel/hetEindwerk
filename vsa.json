@@ -1,19 +1,17 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
   "Products": [
     {
       "id": 1,
       "body": "some comment",
       "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "some cosmment",
+      "postId": 1
     }
   ],
-  "gebruikers": [
+  "Gebruikers": [
     {
       "id": 1,
       "login": "vsa.haydar@gmail.com",
@@ -63,6 +61,41 @@
       "login": "haydart",
       "wachtwoord": "azer",
       "id": 10
+    },
+    {
+      "login": "haydart",
+      "wachtwoord": "azer",
+      "id": 10
+    },
+    {
+      "login": "ilyas@live.com",
+      "wachtwoord": "hizir",
+      "id": 11
+    },
+    {
+      "login": "vsa.abdullah@gamil.com",
+      "wachtwoord": "&é\"",
+      "id": 12
+    },
+    {
+      "login": "jjjj",
+      "wachtwoord": "&é\"",
+      "id": 13
+    },
+    {
+      "login": "ed",
+      "wachtwoord": "&&&",
+      "id": 14
+    },
+    {
+      "login": "jjjj",
+      "wachtwoord": "&é\"'",
+      "id": 15
+    },
+    {
+      "login": "miet@gmail.com",
+      "wachtwoord": "1234",
+      "id": 16
     }
   ]
 }

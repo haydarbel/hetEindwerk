@@ -17,6 +17,57 @@
   <link rel="stylesheet" href="css/mdb.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    window.onload=function(){
+    winkelkarretje=JSON.parse(localStorage.getItem("wnkl"));
+    tabel();
+ }
+
+ function verwijder(){
+    var bverwijder=document.querySelector('#spellist');
+    bverwijder.addEventListener('click',function(e){
+    var nVerw; 
+    if(e.target.id){
+       nVerw=e.target.id
+    }else{
+      var font=e.target;
+      nVerw=font.parentElement.id;
+    }
+    if(Number.isInteger(parseInt(nVerw))){
+    winkelkarretje.splice(nVerw,1);
+    localStorage.setItem("names", JSON.stringify(winkelkarretje));
+    var logoWK=document.getElementsByClassName("fas fa-shopping-cart")[0]
+    logoWK.innerHTML=winkelkarretje.length
+    tabel()
+    }},false);
+    } 
+
+  function tabel(){
+  kTabel="<table class='table'>\n";
+      kTabel+="<thead class='black white-text'>";
+      kTabel+='<tr><th scope="col">#</th><th scope="col">Naam</th><th scope="col">Prijs</th><th scope="col">Aantal</th> <th scope="col"></th></tr></thead>'
+      kTabel+='<tbody id="spellist">'
+      var totalPrijs=0
+        for (var i=0; i < winkelkarretje.length; i++) {
+          kTabel+="<tr class='delete'>"
+          kTabel+=`<th scope="row">${i+1}</th>`
+          kTabel+= "<td>"+winkelkarretje[i]["name"]+"</td>";
+          kTabel+= "<td>"+winkelkarretje[i]["prijs"]+"</td>";
+          kTabel+="<td><input type='number' name='name' id='id' /></td>";
+          kTabel+= '<td><a id="'+[i];   
+          kTabel+= '" class="btn-sm btn-danger">';
+          kTabel+= '<i class="fas fa-trash-alt"></i></a></td>';
+          totalPrijs+=winkelkarretje[i]["prijs"]
+          kTabel+="</tr>\n"
+      }
+      kTabel+='<tr><th colspan="3"><span>Total Prijs:'+totalPrijs;
+        kTabel+= "</span></th></tr>\n"
+        kTabel+="</tbody>\n"
+        kTabel+="</table>\n"
+        document.getElementById('prijsTabel').innerHTML=kTabel;
+        verwijder()
+ }
+  </script>
 </head>
 <body>
 
@@ -62,8 +113,10 @@
     </div>
   </nav>
   <!--/.Navbar -->
-
-
+  <!-- list-->
+  <div id='prijsTabel'  class="container-xl mt-5">
+  </div>
+  <!-- list -->
 
 
 
