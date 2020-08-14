@@ -19,3 +19,7 @@ body {
 font-weight: bolder;
     
 }
+#benefititemsProduct {
+  position: absolute;
+  margin-top: 50px;
+}
