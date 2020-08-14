@@ -41,8 +41,7 @@ document.getElementById('logIn').addEventListener('click',function(){
   })){
     sEmail.value='';
     sWachtwoord.value='';
-    //window.location = "index.html";
-    document.getElementById('lgn').innerHTML='Hosgeldiniz'
+    logInhtml();
   }else{
     sEmail.value='';
     sWachtwoord.value='';
@@ -51,15 +50,32 @@ document.getElementById('logIn').addEventListener('click',function(){
   }
   });
 
-  //resim zoom
-  new Drift(document.querySelector('.drift-demo-trigger'), {
-    paneContainer: document.querySelector('.details'),
-    inlinePane: 700,
-    inlineOffsetY: -15,
-    containInline: true,
-    hoverBoundingBox: true
-  });
+  
 
 
 
-
+  function logInhtml() {
+    var logul = document.getElementById("loginul");
+    logul.innerHTML = ` <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">Ihsan
+    </a>
+    <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+      <a id="afmelden" class="dropdown-item" onclick="afmeldenn()">Afmelden</a>
+      </div>
+      </li>`
+   }
+   
+   
+   function afmeldenn() {
+   var logull = document.getElementById("loginul");
+     logull.innerHTML= `
+     <li class="nav-item">
+           <a class="nav-link waves-effect waves-light" data-toggle="modal" data-target="#modalLRForm">
+            Log-in
+           </a>
+         </li>
+     `;
+   
+   }
+   
