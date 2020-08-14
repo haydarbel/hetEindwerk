@@ -12,6 +12,8 @@
 #herenimg img {
     height: 420px;
     width: 500px;
+    background-size: cover;
+    
 }
 
 #herencards {    /* ?? */

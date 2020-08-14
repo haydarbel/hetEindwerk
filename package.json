@@ -1,5 +1,5 @@
 {
-  "name": "heteindwerk",
+  "name": "json-server",
   "version": "1.0.0",
   "description": "Fake REST API voor testen",
   "main": "index.js",
