@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design for Bootstrap</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+
+<!--Navbar -->
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark black">
+  <a class="navbar-brand fab fa-shopware" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Categorieen
+        </a>
+        <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+          <a class="dropdown-item" href="Mannen.html">Heren</a>
+          <a class="dropdown-item" href="Dames.html">Dames</a>
+          <a class="dropdown-item" href="Solden.html">Solden</a>
+        </div>
+      </li>
+    </ul>
+    <ul  class="navbar-nav ml-auto nav-flex-icons">
+      <li id="loginul" class="nav-item">
+        <a   class="nav-link waves-effect waves-light" data-toggle="modal" data-target="#modalLRForm">
+         Log-in
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="WinkelMandje.html" class="nav-link waves-effect waves-light">
+          <i class="fas fa-shopping-cart"><span id="antaalmandje">0</span></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--/.Navbar -->
+
+
+<!--Carousel Wrapper-->
+<div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+  <!--Indicators-->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+    <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+  </ol>
+  <!--/.Indicators-->
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+    <!--First slide-->
+    <div class="carousel-item active">
+      <a href="Solden.html">
+           <img class="d-block w-100" src="img/korting.jpg"
+        alt="First slide">
+      </a>
+   
+    </div>
+    <!--/First slide-->
+    <!--Second slide-->
+    <div class="carousel-item">
+      <a href="Solden.html">
+         <img class="d-block w-100" src="img/Korting1.png"
+        alt="Second slide">
+      </a>
+     
+    </div>
+    <!--/Second slide-->
+    <!--Third slide-->
+    <div class="carousel-item">
+      <a href="Solden.html"> <img class="d-block w-100" src="img/Korting2.jpg"
+        alt="Third slide"></a>
+     
+    </div>
+    <!--/Third slide-->
+  </div>
+  <!--/.Slides-->
+  <!--Controls-->
+  <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  <!--/.Controls-->
+</div>
+<!--/.Carousel Wrapper-->
+
+
+<!--Dames division Begint-->
+<div id="damesdiv" class="container">
+  <div class="row">
+    <div class="col-md-7"><!--Carousel Wrapper-->
+<!-- multi item carousel -->
+<div class="controls-top">
+  <a id="cntrlbtton1" class="btn btn-primary leftLst" href="#carousel-example-multi" data-slide="prev"><i
+      class="fas fa-chevron-left"></i></a>
+  <a id="cntrlbtton1" class="btn btn-primary rightLst" href="#carousel-example-multi" data-slide="next"><i
+      class="fas fa-chevron-right"></i></a>
+</div>
+<div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2" data-ride="carousel">
+
+    
+  
+ 
+
+  <div id="multi-item" class="carousel-inner v-2" role="listbox">
+
+    <div class="carousel-item active">
+      <div class="col-12 col-lg-4">
+        <div class="card mb-2">
+          <img class="card-img-top" id="multiImg" src="img/women-1.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title font-weight-bold">Card 1</h4>
+            <p class="card-text"></p>
+            <a class="btn btn-primary btn-md btn-rounded">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="col-12 col-lg-4">
+        <div class="card mb-2">
+          <img class="card-img-top" id="multiImg" src="img/women-2.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title font-weight-bold">Card 2</h4>
+            <p class="card-text"></p>
+            <a class="btn btn-primary btn-md btn-rounded">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="col-12 col-lg-4">
+        <div class="card mb-2">
+          <img class="card-img-top" id="multiImg" src="img/women-3.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title font-weight-bold">Card 3</h4>
+            <p class="card-text"></p>
+            <a class="btn btn-primary btn-md btn-rounded">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="col-12 col-lg-4">
+        <div class="card mb-2">
+          <img class="card-img-top" id="multiImg" src="img/women-4.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title font-weight-bold">Card 4</h4>
+            <p class="card-text"></p>
+            <a class="btn btn-primary btn-md btn-rounded">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+
+
+  </div>
+ <!-- Indicators -->
+ <ol class="carousel-indicators">
+  <li class="lili" data-target="#carousel-example-multi" data-slide-to="0" class="active"></li>
+  <li class="lili" data-target="#carousel-example-multi" data-slide-to="1"></li>
+  <li class="lili" data-target="#carousel-example-multi" data-slide-to="2"></li>
+  <li class="lili" data-target="#carousel-example-multi" data-slide-to="3"></li>
+</ol>
+<!--/.Indicators-->
+
+</div>
+<!--Controls-->
+
+<!--/.Controls-->
+<!-- /multi item carousel -->
+</div>
+<div id="damesimg" class="col-md-5">
+  <img src="img/dames.jpg" alt="kadinlar">
+  <h1>Dames</h1>
+  <a href="Dames.html">
+  Ontdekken
+  </a>
+  
+</div>
+
+</div>
+</div>
+<!--Dames division End-->
+
+
+
+<!--Heren division Begint-->
+<div id="herendiv" class="container">
+  <div class="row">
+    <div id="herenimg" class="col-md-5">
+      <img  src="img/heren.jpg" alt="erkekler">
+      <h1>Mannen</h1>
+      <a href="Mannen.html">
+      Ontdekken
+      </a>
+    </div>
+    <div id="herencards" class="col-md-7">
+      <!-- multi item carousel -->
+  <div id="carousel-example-multi1" class="carousel slide carousel-multi-item v-2" data-ride="carousel">
+
+    <div class="controls-top">
+      <a id="cntrlbtton" class="btn btn-primary leftLst" href="#carousel-example-multi1" data-slide="prev"><i
+          class="fas fa-chevron-left"></i></a>
+      <a  id="cntrlbtton" class="btn btn-primary rightLst" href="#carousel-example-multi1" data-slide="next"><i
+          class="fas fa-chevron-right"></i></a>
+    </div>
+  
+    
+  
+    <div id="multi-item" class="carousel-inner v-2" role="listbox">
+  
+      <div class="carousel-item active">
+        <div class="col-12 col-lg-4">
+          <div class="card mb-2">
+            <img class="card-img-top" id="multiImg" src="img/man-1.jpg"
+              alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Card 1</h4>
+              <p class="card-text"></p>
+              <a class="btn btn-primary btn-md btn-rounded">Button</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="col-12 col-lg-4">
+          <div class="card mb-2">
+            <img class="card-img-top" id="multiImg" src="img/man-2.jpg"
+              alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Card 2</h4>
+              <p class="card-text"></p>
+              <a class="btn btn-primary btn-md btn-rounded">Button</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="col-12 col-lg-4">
+          <div class="card mb-2">
+            <img class="card-img-top" id="multiImg" src="img/man-3.jpg"
+              alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Card 3</h4>
+              <p class="card-text"></p>
+              <a class="btn btn-primary btn-md btn-rounded">Button</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="col-12 col-lg-4">
+          <div class="card mb-2">
+            <img class="card-img-top" id="multiImg" src="img/man-4.jpg"
+              alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Card 4</h4>
+              <p class="card-text"></p>
+              <a class="btn btn-primary btn-md btn-rounded">Button</a>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+
+  
+    </div>
+ 
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li class="lili" data-target="#carousel-example-multi1" data-slide-to="0" class="active"></li>
+    <li class="lili" data-target="#carousel-example-multi1" data-slide-to="1"></li>
+    <li class="lili" data-target="#carousel-example-multi1" data-slide-to="2"></li>
+    <li class="lili" data-target="#carousel-example-multi1" data-slide-to="3"></li>
+
+  </ol>
+  <!--/.Indicators-->
+  </div>
+  <!--Controls-->
+  
+  <!--/.Controls-->
+  <!-- /multi item carousel -->
+    </div>
+  </div>
+</div>
+<!--Heren division End-->
+
+
+<!--Benefit Items Begint-->
+<div id="benefititems0" class="container benefit-items">
+  <div class="row">
+      <div class="col-md-4">
+          <div class="single-benefit">
+              <div class="sb-icon">
+                  <img src="img/icon-1.png" alt="">
+              </div>
+              <div class="sb-text">
+                  <h6>Free Shipping</h6>
+                 
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="single-benefit">
+              <div class="sb-icon">
+                  <img src="img/icon-2.png" alt="">
+              </div>
+              <div class="sb-text">
+                  <h6>Delivery On Time</h6>
+                  <p>If good have prolems</p>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="single-benefit">
+              <div class="sb-icon">
+                  <img src="img/icon-1.png" alt="">
+              </div>
+              <div class="sb-text">
+                  <h6>Secure Payment</h6>
+                  <p>100% secure payment</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!--Benefit Items Ends-->
+
+
+<!-- Footer -->
+<footer class="page-footer font-small special-color-dark pt-4">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+        <a class="sociaal-fb" class="btn-floating btn-fb mx-1">
+          <i class="fab fa-facebook-f"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="sociaal-tw" class="btn-floating btn-tw mx-1">
+          <i class="fab fa-twitter"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="sociaal-gp"class="btn-floating btn-gplus mx-1">
+          <i class="fab fa-google-plus-g"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="sociaal-li"class="btn-floating btn-li mx-1">
+          <i class="fab fa-linkedin-in"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="sociaal-dr"class="btn-floating btn-dribbble mx-1">
+          <i class="fab fa-dribbble"> </i>
+        </a>
+      </li>
+    </ul>
+    <!-- Social buttons -->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> Abdullah-Brahim-Haydar-Ihsan</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+
+
+<!--Modal: Login / Register Form-->
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Modal cascading tabs-->
+      <div class="modal-c-tabs">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
+              Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
+              Register</a>
+          </li>
+        </ul>
+
+        <!-- Tab panels -->
+        <div class="tab-content">
+          <!--Panel 7-->
+          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body mb-1">
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-envelope prefix"></i>
+                <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput10">Your email</label>
+              </div>
+
+              <div class="md-form form-sm mb-4">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
+              </div>
+              <div class="text-center mt-2">
+                <button id="logIn" class="btn btn-info">Log in <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-center text-md-right mt-1">
+                <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
+                <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+          <!--/.Panel 7-->
+
+          <!--Panel 8-->
+          <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body">
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-envelope prefix"></i>
+                <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
+              </div>
+
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
+              </div>
+
+              <div class="md-form form-sm mb-4">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
+              </div>
+
+              <div class="text-center form-sm mt-2">
+                <button id="signUp" class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-right">
+                <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!--/.Panel 8-->
+        </div>
+
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Login / Register Form-->
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript" src="js/script.js" ></script>
+  <script type="text/javascript" src="js/mijnn.js"></script>
+
+</body>
+</html>
