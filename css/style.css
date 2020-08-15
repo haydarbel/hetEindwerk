@@ -36,8 +36,7 @@
 }
 
 #benefititems {
-    position: absolute;
-    bottom: 140px;
+  
     margin-top: 50px;
 }
 
@@ -168,8 +167,12 @@ width: 47px;}
 }
 
 .footer1 {
-    position: absolute;
-    bottom: 0;
+  
     width: 100%;
 }
+#footerm{
+    position: absolute;
+}
+
+
 
