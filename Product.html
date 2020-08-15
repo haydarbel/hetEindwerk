@@ -18,7 +18,64 @@
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/product.css">
+  <script>
+    function logInhtml() {
+      let cGebruiker=JSON.parse(localStorage.getItem("cGebruiker"));
+      if (cGebruiker){
+      var logul = document.getElementById("loginul");
+      logul.innerHTML = ` <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">${cGebruiker.gebruikersnaam}
+        </a>
+        <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+          <a id="afmelden" class="dropdown-item" onclick="afmeldenn()">Afmelden</a>
+          </div>
+        </li>`
+      }
+     }
+    
+     function afmeldenn() {
+    localStorage.removeItem("cGebruiker");
+    var logull = document.getElementById("loginul");
+     logull.innerHTML= `
+     <li class="nav-item">
+           <a class="nav-link waves-effect waves-light" data-toggle="modal" data-target="#modalLRForm">
+            Log-in
+           </a>
+         </li>
+     `;
+   
+   }
+    
+   function productZet(){
+   let url='http://localhost:3000/Products'
+   let req=new XMLHttpRequest();
+   req.open("GET",url,true);
+   req.send();
+   req.onload=function(){
+   let Products=JSON.parse(req.responseText);
+   let eProductTitle=document.getElementById('productNaam')
+   let eProductPrijs=document.getElementById('prijs')
+   let eOmschrijving=document.getElementById('omschrijving')
+   eProductTitle.innerHTML=Products[1].Title
+   eProductPrijs.innerHTML=Products[1].prijs
+   eOmschrijving.innerHTML=Products[1].descriptie
+   for(let i=0;i<3;i++){
+     let eImg=document.getElementById(`image${i}`)
+     let ekImg=document.getElementById(`kimage${i}`)
+     eImg.src=Products[0][`src${i}`]
+     ekImg.src=Products[0][`src${i}`]
+    }
+   }
+  }
 
+   
+   window.onload=function(){
+    logInhtml()
+    
+    productZet()
+  }
+  </script>
 </head>
 <body>
 
@@ -50,7 +107,7 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto nav-flex-icons">
-        <li class="nav-item">
+        <li id="loginul" class="nav-item">
           <a class="nav-link waves-effect waves-light" data-toggle="modal" data-target="#modalLRForm">
            Log-in
           </a>
@@ -68,22 +125,23 @@
   <div class="pd-wrap">
     <div class="container">
     <div class="heading-section">
-    <h2 class="prodTitle">Product Details</h2>
+    <h2 id="productTitle"class="prodTitle">Product Details</h2>
     </div>
 
     
     <div class="row">
     <div class="col-md-6">
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="d-block w-100" id="image1" src="" alt="First slide">
+        <img class="d-block w-100" id="image0" src="img/man-1.jpg" alt="First slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" id="image2" src="" alt="Second slide">
+        <img class="d-block w-100" id="image1" src="img/man-2.jpg" alt="Second slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" id="image3" src="" alt="Third slide">
+        <img class="d-block w-100" id="image2" src="img/man-3.jpg" alt="Third slide">
+
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -98,13 +156,15 @@
     <div class="container pt-4 pb-5">
       <div class="row carousel-indicators">
         <div class="col-md-4 item">
-          <img id="image11" src="" class="img-fluid" data-target="#carouselExampleIndicators" data-slide-to="0"/>
+
+          <img src="img/man-1.jpg" id="kimage0" class="img-fluid" data-target="#carouselExampleIndicators" data-slide-to="0"/>
         </div>
         <div class="col-md-4 item">
-          <img id="image22" src="" class="img-fluid" data-target="#carouselExampleIndicators" data-slide-to="1"/>
+          <img src="img/man-2.jpg" id="kimage1" class="img-fluid" data-target="#carouselExampleIndicators" data-slide-to="1"/>
         </div>
         <div class="col-md-4 item">
-          <img id="image33" src="" class="img-fluid" data-target="#carouselExampleIndicators" data-slide-to="2"/>
+          <img src="img/man-3.jpg" id="kimage2" class="img-fluid" data-target="#carouselExampleIndicators" data-slide-to="2"/>
+
         </div>
       </div>
     </div>
@@ -113,7 +173,7 @@
 <div class="col-md-6">
   <div class="product-dtl">
   <div class="product-info">
-  <div class="product-name" id="productNaam">NAAM VAN DE PRODUCT</div>
+  <div class="product-name" ><h3 id="productNaam"></h3></div>
 
   <div class="product-price"><span> <b> PRIJS</b> : </span><span id="prijs">$39.00</span></div>
   </div>
