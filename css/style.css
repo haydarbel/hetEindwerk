@@ -36,8 +36,7 @@
 }
 
 #benefititems {
-    position: absolute;
-    bottom: 140px;
+ 
     margin-top: 50px;
 }
 
@@ -167,9 +166,11 @@ width: 47px;}
   background-color: blue;
 }
 
-.footer1 {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+.categorienaam {
+    text-align: center;
+    margin-top: 40px;
 }
 
+#cardCateg {
+    margin-top: 70px;
+}
