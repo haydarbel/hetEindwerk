@@ -139,4 +139,141 @@ function naarProduct(){
    }
   
  
+// Zet de producten in de dames.html
+function productCategoryDames() {
+  let url='http://localhost:3000/Products'
+   let req=new XMLHttpRequest();
+   req.open("GET",url,true);
+   req.send();
+   req.onload=function(){
+     var damesarray = [];
+   let Products=JSON.parse(req.responseText);
+   for(i=0;i<Products.length;i++){
+    if(Products[i].Categorie == 'Dames'){
+     damesarray.push(Products[i])
+    }
+}
+for(i=0;i<damesarray.length;i++) {
+  var damedivs = document.getElementsByClassName('Category-dames-product')[i];
+  damedivs.innerHTML = `
+  <div class="card">
 
+  <!-- Card image -->
+  <div class="view overlay">
+    <img class="card-img-top" src="${damesarray[i].src1}"
+      alt="Card image cap">
+    <a href="#!">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h4 class="card-title">${damesarray[i].Title}</h4>
+    <!-- Text -->
+    <p class="card-text"><b>Prijs:</b>${damesarray[i].prijs}</p>
+    <!-- Button -->
+    <a href="#" class="btn btn-primary">Button</a>
+
+  </div>
+
+</div>
+  `;
+}
+}
+}
+
+// Zet de producten in de mannen.html
+function productCategoryMannen() {
+  let url='http://localhost:3000/Products'
+   let req=new XMLHttpRequest();
+   req.open("GET",url,true);
+   req.send();
+   req.onload=function(){
+     var mannenarray = [];
+   let Products=JSON.parse(req.responseText);
+   for(i=0;i<Products.length;i++){
+    if(Products[i].Categorie == 'Mannen') {
+      mannenarray.push(Products[i])
+    }
+}
+for(i=0;i<mannenarray.length;i++) {
+  var mannendivs = document.getElementsByClassName('Category-mannen-product')[i];
+  mannendivs.innerHTML = `
+  <div class="card">
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <img class="card-img-top" src="${mannenarray[i].src1}"
+      alt="Card image cap">
+    <a href="#!">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h4 class="card-title">${mannenarray[i].Title}</h4>
+    <!-- Text -->
+    <p class="card-text"><b>Prijs:</b>${mannenarray[i].prijs}</p>
+    <!-- Button -->
+    <a href="#" class="btn btn-primary">Button</a>
+
+  </div>
+
+</div>
+  `;
+}
+}
+}
+
+
+// Zet de producten in de solden.html
+function productCategorySolden() {
+  let url='http://localhost:3000/Products'
+   let req=new XMLHttpRequest();
+   req.open("GET",url,true);
+   req.send();
+   req.onload=function(){
+     var soldenarray = [];
+   let Products=JSON.parse(req.responseText);
+   for(i=0;i<Products.length;i++){
+   if(Products[i].Categorie == 'Solden'){
+      soldenarray.push(Products[i])
+    }
+}
+for(i=0;i<soldenarray.length;i++) {
+  var soldendivs = document.getElementsByClassName('Category-solden-product')[i];
+  soldendivs.innerHTML = `
+  <div class="card">
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <img class="card-img-top" src="${soldenarray[i].src1}"
+      alt="Card image cap">
+    <a href="#!">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h4 class="card-title">${soldenarray[i].Title}</h4>
+    <!-- Text -->
+    <p class="card-text"><b>Prijs:</b>${soldenarray[i].prijs}</p>
+    <!-- Button -->
+    <a href="#" class="btn btn-primary">Button</a>
+
+  </div>
+
+</div>
+  `;
+}
+}
+}
