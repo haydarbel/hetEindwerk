@@ -84,6 +84,7 @@ document.getElementById('logIn').addEventListener('click',function(){
          </li>
      `;
    }
+
 // Zet products om start pagina
    function strtpagina(){
    let url='http://localhost:3000/Products'
@@ -102,4 +103,5 @@ document.getElementById('logIn').addEventListener('click',function(){
    }
   }
 
-  
+ 
+
