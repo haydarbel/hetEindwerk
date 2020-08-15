@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "posts": [
     {
       "id": 1,
@@ -119,6 +120,121 @@
     }
   ],
   "gebruikers": [
+=======
+  "Products": [
+    {
+      "id": 1,
+      "Categorie": "Dames",
+      "Title": "Vrouwen Lange Mouwen Casual Sweater",
+      "src0": "img/products/Casual Sweater1.jpg",
+      "src1": "img/products/Casual Sweater2.jpg",
+      "src2": "img/products/Casual Sweater3.jpg",
+      "prijs": "19€",
+      "descriptie": "Product Vorm:Hoodies Sweatshirts Fit:Tailored Bevestiging:Trui Mouw Lengte:Lange  Binnen Materiaal Samenstelling:Polyester Seizoen:Lente; Herfst"
+    },
+    {
+      "id": 2,
+      "Categorie": "Dames",
+      "Title": "Sneakers Vrouwen",
+      "src0": "img/products/Sneakers Vrouwen1.jpg",
+      "src1": "img/products/Sneakers Vrouwen2.jpg",
+      "src2": "img/products/Sneakers Vrouwen3.jpg",
+      "prijs": "22€",
+      "descriptie":  " <b><br>Merknaam:</b>rimocy  <br>  Bovenmateriaal:Mesh(Air mesh) <br>  Afdichtingen:Instappers   <br>Fit:Past qua maat,nemen uw normale grootte   <br>Binnenzool Materiaal:Fabric    <br>Seizoen: Spring/Autumn   <br>Patronen:Solid   <br>Lijnmateriaal:Cotton Fabric "
+    },
+    {
+      "id": 3,
+      "Categorie": "Dames",
+      "Title": "Vrouwen Leren Jas",
+      "src1": "img/products/Vrouwen Leren Jas1.jpg",
+      "src2": "img/products/Vrouwen Leren Jas2.jpg",
+      "src3": "img/products/Vrouwen Leren Jas3.jpg",
+      "prijs": "32€",
+      "descriptie": "Afdichtingen:zipper   Stijl:Moto & Biker   Mouwstijl:REGULAR   Mouwlengte(cm):Vol   Buitenkleding:Leather & Suede   Detachable Part:NONE   Clothing Length:REGULAR   Leeftijd:Leeftijden 18-35 Jaar   Geslacht:WOMEN    Season:Autumn"
+    },
+    {
+      "id": 4,
+      "Categorie": "Dames",
+      "Title": "Vrouwen Elastische Jeans",
+      "src1": "img/products/Vrouwen Elastische Jeans1.jpg",
+      "src2": "img/products/Vrouwen Elastische Jeans2.jpg",
+      "src3": "img/products/Vrouwen Elastische Jeans3.jpg",
+      "prijs": "15€",
+      "descriptie": "Merknaam:F&JE   Materiaal:COTTON   Lengte:Ankle-Length Pants   Leeftijd:Leeftijden 18-35 Jaar Oud   Aritkeltype:JEANS      Geslacht:WOMEN    Stijl:Casual    Afdichtingen:Elastic   Jeans Style:Harem Pants   Pas:Loose "
+    },
+    {
+      "id": 5,
+      "Categorie": "Mannen",
+      "Title": "Mannen Sweatshirt",
+      "src1": "img/products/Mannen Sweatshirt1.jpg",
+      "src2": "img/products/Mannen Sweatshirt2.jpg",
+      "src3": "img/products/Mannen Sweatshirt3.jpg",
+      "prijs": "13€",
+      "descriptie": "Merknaam:covrlge   Mouwlengte(cm):Vol   Stijl:Casual Clothing   Length:REGULAR   Kraag:Hooded   Afdichtingen:Geen     Hooded:Ja   Dikte:STANDARD   Materiaal:Polyester    Sleeve length:long sleeve S  eason:spring/autumn "
+    },
+    {
+      "id": 6,
+      "Categorie": "Mannen",
+      "Title": "Mannen Sneakers",
+      "src1": "img/products/Mannen Sneakers1.jpg",
+      "src2": "img/products/Mannen Sneakers2.jpg",
+      "src3": "img/products/Mannen Sneakers3.jpg",
+      "prijs": "26€",
+      "descriptie": "Merknaam:BTMOTTZ   Bovenmateriaal:PU   Materiaal buitenzool:RUBBER    Afdichtingen:Veterschoenen   Fit:Past qua maat, nemen uw normale grootte   Eigenschap:Ademend   Binnenzool Materiaal:RUBBER    Lijnmateriaal:Cotton Fabric   Seizoen:Spring/Autumn"
+    },
+    {
+      "id": 7,
+      "Categorie": "Mannen",
+      "Title": "Mannen Lederen Jas",
+      "src1": "img/products/Mannen Lederen Jas1.jpg",
+      "src2": "img/products/Mannen Lederen Jas2.jpg",
+      "src3": "img/products/Mannen Lederen Jas3.jpg",
+      "prijs": "32€",
+      "descriptie": "Merknaam:TOLOER   Dikte:STANDARD   Hooded:Nee   Materiaal:PU   Stof:Batik   Lijnmateriaal:Polyester   Clothing Length:REGULAR      Type:REGULAR   Kraag:V-neck   Decoratie:Pockets   Afdichtingen:zipper  Mouwlengte(cm):Vol "
+    },
+    {
+      "id": 8,
+      "Categorie": "Mannen",
+      "Title": "Mannen Korte Broek",
+      "src1": "img/products/Mannen Korte Broek1.jpg",
+      "src2": "img/products/Mannen Korte Broek2.jpg",
+      "src3": "img/products/Mannen Korte Broek3.jpg",
+      "prijs": "18€",
+      "descriptie": "Stijl:Casual   Materiaal:COTTON    Lengte:Knee   LengthMiddel:Mid   Afdichtingen:Elastic Waist   Patronen:Solid   Pant Style:REGULAR"
+    },
+    {
+      "id": 9,
+      "Categorie": "Solden",
+      "Title": "Dames Fietsen Suit",
+      "src1": "img/products/Korting Dames Fietsen1.jpg",
+      "src2": "img/products/Korting Dames Fietsen2.jpg",
+      "src3": "img/products/Korting Dames Fietsen3.jpg",
+      "prijs": "39€",
+      "descriptie": "Materiaal:Polyester   Mouwlengte(cm):Vol   Geslacht:Vrouw    Seizoen:Veer,Summer,Autumn,Winter   Zipper Length:Full Zipper   Fit:Past qua maat, nemen uw normale grootte   Stof:Broadcloth"
+    },
+    {
+      "id": 10,
+      "Categorie": "Solden",
+      "Title": "Mannen Joggingbroek",
+      "src1": "img/products/Mannen Joggingbroek1.jpg",
+      "src2": "img/products/Mannen Joggingbroek2.jpg",
+      "src3": "img/products/Mannen Joggingbroek3.jpg",
+      "prijs": "9€",
+      "descriptie": "Merknaam:ASTFSC   Pant Style:Cargo Pants   Lengte:Ankle-Length Pants   Frontstijl:Platgeplooid   Pas:Loose   Materiaal:COTTON   Geslacht:MEN   Stof:Broadcloth   Afdichtingen:Drawstring"
+    },
+    {
+      "id": 11,
+      "Categorie": "Solden",
+      "Title": "Dames Sweater",
+      "src1": "img/products/Dames Sweater1.jpg",
+      "src2": "img/products/Dames Sweater2.jpg",
+      "src3": "img/products/Dames Sweater3.jpg",
+      "prijs": "20€",
+      "descriptie": "Materiaal:Polyester   Clothing Length:REGULAR   Kraag:Turtleneck   Aritkeltype:Pullovers   Mouwlengte(cm):Vol   Afdichtingen:Geen   Geslacht:WOMEN    codeAge-appropriate:25-29 years old "
+    }
+  ],
+  "Gebruikers": [
+>>>>>>> 809d8d43d760349f7f3e2740856abcd6bcfce4ca
     {
       "id": 1,
       "login": "vsa.haydar@gmail.com",
@@ -150,11 +266,14 @@
       "id": 6
     },
     {
+<<<<<<< HEAD
       "login": "haydar@gmail.com",
       "wachtwoord": "Ayse",
       "id": 7
     },
     {
+=======
+>>>>>>> 809d8d43d760349f7f3e2740856abcd6bcfce4ca
       "login": "hay",
       "wachtwoord": "aaa",
       "id": 8
@@ -163,6 +282,15 @@
       "login": "isa",
       "wachtwoord": "1234",
       "id": 9
+<<<<<<< HEAD
+=======
+    },
+    {
+      "login": "haydar@gmail.com",
+      "gebruikersnaam": "haydar",
+      "wachtwoord": "1234",
+      "id": 10
+>>>>>>> 809d8d43d760349f7f3e2740856abcd6bcfce4ca
     }
   ]
 }

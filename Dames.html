@@ -17,11 +17,160 @@
   <link rel="stylesheet" href="css/mdb.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="css/style.css">
+<<<<<<< HEAD
+=======
+  <script>
+    window.onload=function(){
+      logInhtml()
+    }
+    
+          function logInhtml() {
+            let cGebruiker=JSON.parse(localStorage.getItem("cGebruiker"));
+            if (cGebruiker){
+            var logul = document.getElementById("loginul");
+            logul.innerHTML = ` <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">${cGebruiker.gebruikersnaam}
+              </a>
+              <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+                <a id="afmelden" class="dropdown-item" onclick="afmeldenn()">Afmelden</a>
+                </div>
+              </li>`
+            }
+           }
+         
+           function afmeldenn() {
+          localStorage.removeItem("cGebruiker");
+          var logull = document.getElementById("loginul");
+           logull.innerHTML= `
+           <li class="nav-item">
+                 <a class="nav-link waves-effect waves-light" data-toggle="modal" data-target="#modalLRForm">
+                  Log-in
+                 </a>
+               </li>
+           `;
+         
+         }
+  
+  </script>
+>>>>>>> 809d8d43d760349f7f3e2740856abcd6bcfce4ca
 </head>
 <body>
 
 <!--Begint Uw Project Hier-->
 
+<<<<<<< HEAD
+=======
+
+
+<!-- Card -->
+<div>
+<div class="card">
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+      alt="Card image cap">
+    <a href="#!">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h4 class="card-title">Card title</h4>
+    <!-- Text -->
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+      content.</p>
+    <!-- Button -->
+    <a href="#" class="btn btn-primary">Button</a>
+
+  </div>
+
+</div>
+<div class="card">
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+      alt="Card image cap">
+    <a href="#!">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h4 class="card-title">Card title</h4>
+    <!-- Text -->
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+      content.</p>
+    <!-- Button -->
+    <a href="#" class="btn btn-primary">Button</a>
+
+  </div>
+
+</div>
+<div class="card">
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+      alt="Card image cap">
+    <a href="#!">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h4 class="card-title">Card title</h4>
+    <!-- Text -->
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+      content.</p>
+    <!-- Button -->
+    <a href="#" class="btn btn-primary">Button</a>
+
+  </div>
+
+</div>
+<div class="card">
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+      alt="Card image cap">
+    <a href="#!">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h4 class="card-title">Card title</h4>
+    <!-- Text -->
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+      content.</p>
+    <!-- Button -->
+    <a href="#" class="btn btn-primary">Button</a>
+
+  </div>
+
+</div>
+
+</div>
+<!-- Card -->
+
+
+>>>>>>> 809d8d43d760349f7f3e2740856abcd6bcfce4ca
     <!--Navbar -->
 <nav class="mb-1 navbar navbar-expand-lg navbar-dark black">
     <a class="navbar-brand fab fa-shopware" href="#"></a>
@@ -48,7 +197,11 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto nav-flex-icons">
+<<<<<<< HEAD
         <li class="nav-item">
+=======
+        <li id="loginul"class="nav-item">
+>>>>>>> 809d8d43d760349f7f3e2740856abcd6bcfce4ca
           <a class="nav-link waves-effect waves-light" data-toggle="modal" data-target="#modalLRForm">
            Log-in
           </a>
