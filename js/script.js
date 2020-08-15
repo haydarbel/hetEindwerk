@@ -102,6 +102,41 @@ document.getElementById('logIn').addEventListener('click',function(){
    }
    }
   }
-
+// van index tot Product pagina
+function naarProduct(){
+    var eKnop=document.getElementById('multi-item');
+    var eKnop2=document.getElementById('multi-item2');
+    eKnop.addEventListener('click',function(e){
+    if(e.target.tagName.toLowerCase()==="a"){
+    let ProductNaam=e.target.previousElementSibling.previousElementSibling.textContent;
+    let url='http://localhost:3000/Products'
+    req=new XMLHttpRequest();
+    req.open("GET",url,true);
+    req.send();
+    req.onload=function(){
+    let aProducts=JSON.parse(req.responseText);
+    let oGekozen=aProducts.find(item=>{
+      return item.Title===ProductNaam});
+    localStorage.setItem('CurrentProduct',JSON.stringify(oGekozen))
+      }
+     }    
+    });
+    eKnop2.addEventListener('click',function(e){
+    if(e.target.tagName.toLowerCase()==="a"){
+    let ProductNaam=e.target.previousElementSibling.previousElementSibling.textContent;
+    let url='http://localhost:3000/Products'
+    req=new XMLHttpRequest();
+    req.open("GET",url,true);
+    req.send();
+    req.onload=function(){
+    let aProducts=JSON.parse(req.responseText);
+    let oGekozen=aProducts.find(item=>{
+      return item.Title===ProductNaam});
+    localStorage.setItem('CurrentProduct',JSON.stringify(oGekozen))
+      }
+     }    
+    });
+   }
+  
  
 

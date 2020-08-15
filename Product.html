@@ -34,7 +34,7 @@
       }
      }
     
-     function afmeldenn() {
+    function afmeldenn() {
     localStorage.removeItem("cGebruiker");
     var logull = document.getElementById("loginul");
      logull.innerHTML= `
@@ -47,34 +47,80 @@
    
    }
     
-   function productZet(){
-   let url='http://localhost:3000/Products'
-   let req=new XMLHttpRequest();
-   req.open("GET",url,true);
-   req.send();
-   req.onload=function(){
-   let Products=JSON.parse(req.responseText);
+    function productZet(){
+  //  let url='http://localhost:3000/Products'
+  //  let req=new XMLHttpRequest();
+  //  req.open("GET",url,true);
+  //  req.send();
+  //  req.onload=function(){
+  //  let Products=JSON.parse(req.responseText);
+   let Product=JSON.parse(localStorage.getItem('CurrentProduct'));
    let eProductTitle=document.getElementById('productNaam')
    let eProductPrijs=document.getElementById('prijs')
    let eOmschrijving=document.getElementById('omschrijving')
-   eProductTitle.innerHTML=Products[1].Title
-   eProductPrijs.innerHTML=Products[1].prijs
-   eOmschrijving.innerHTML=Products[1].descriptie
+   eProductTitle.innerHTML=Product.Title
+   eProductPrijs.innerHTML=Product.prijs
+   eOmschrijving.innerHTML=Product.descriptie
    for(let i=0;i<3;i++){
      let eImg=document.getElementById(`image${i}`)
      let ekImg=document.getElementById(`kimage${i}`)
-     eImg.src=Products[0][`src${i}`]
-     ekImg.src=Products[0][`src${i}`]
+     eImg.src=Product[`src${i}`]
+     ekImg.src=Product[`src${i}`]
     }
    }
-  }
+  
+    function toevogen(){
+     let bToeVoeg=document.getElementById("toevoegen");
+     bToeVoeg.addEventListener('click',function(){
+       let oToegevoegd=JSON.parse(localStorage.getItem('CurrentProduct'));
+       oToegevoegd.aantal=parseInt(document.getElementById('aantal').value);
+       oToegevoegd.kleur=document.getElementById('kleur').value;
+       oToegevoegd.maat= document.getElementById('maat').value;
+       if(JSON.parse(localStorage.getItem("winkelmandje"))){
+         let WinkelMandje=JSON.parse(localStorage.getItem("winkelmandje")) 
+         if(WinkelMandje.find(item=>{
+           return item.naam===oToegevoegd.naam && item.maat===oToegevoegd.maat && 
+           item.kleur===oToegevoegd.kleur
+          })){
+          let dezelfde=WinkelMandje.find(item=>{
+          return item.naam===oToegevoegd.naam&&item.maat===oToegevoegd.maat&& 
+           item.kleur===oToegevoegd.kleur
+          })
+          console.log(dezelfde)
+          dezelfde.aantal+=oToegevoegd.aantal
+          localStorage.setItem("winkelmandje",JSON.stringify(WinkelMandje))
+          }else{
+            WinkelMandje.push(oToegevoegd)
+            localStorage.setItem("winkelmandje",JSON.stringify(WinkelMandje))
+          }
+        } else{
+       let WinkelMandje=[];
+       oToegevoegd=JSON.parse(localStorage.getItem('CurrentProduct'));   
+       oToegevoegd.aantal=parseInt(document.getElementById('aantal').value);
+       oToegevoegd.kleur=document.getElementById('kleur').value;
+       oToegevoegd.maat= document.getElementById('maat').value;
+       WinkelMandje.push(oToegevoegd);
+       localStorage.setItem("winkelmandje",JSON.stringify(WinkelMandje))
+      }
+      WinkelMandje=JSON.parse(localStorage.getItem("winkelmandje"))
+      let logoWK=document.getElementById("aantalmandje");
+      logoWK.innerHTML=WinkelMandje.length
+  });
+   }
+      
 
-   
    window.onload=function(){
     logInhtml()
     
     productZet()
+
+    toevogen()
   }
+
+
+
+
+
   </script>
 </head>
 <body>
@@ -114,7 +160,7 @@
         </li>
         <li class="nav-item">
           <a href="WinkelMandje.html" class="nav-link waves-effect waves-light">
-            <i class="fas fa-shopping-cart"><span id="antaalmandje">0</span></i>
+            <d class="fas fa-shopping-cart"><span id="aantalmandje">0</span></i>
           </a>
         </li>
       </ul>
@@ -134,13 +180,13 @@
    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="d-block w-100" id="image0" src="img/man-1.jpg" alt="First slide">
+        <img class="d-block w-100" id="image0"  alt="First slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" id="image1" src="img/man-2.jpg" alt="Second slide">
+        <img class="d-block w-100" id="image1"  alt="Second slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" id="image2" src="img/man-3.jpg" alt="Third slide">
+        <img class="d-block w-100" id="image2"  alt="Third slide">
 
       </div>
     </div>
@@ -198,13 +244,13 @@
   </div>
   </div>
   <div class="product-count">
-  <label for="size">ANTAAL</label>
+  <label for="size">AANTAL</label>
   <form action="#" class="display-flex">
 
-  <input id="antaal" type="number" name="quantity" min="0" value="1">
+  <input id="aantal" type="number" name="quantity" min="0" value="1">
   
   </form>
-  <a href="#" class="round-black-btn">VOEG TO</a>
+  <a href="#" id='toevoegen' class="round-black-btn">VOEG TO</a>
   </div>
   <!--Benefit Items Begint-->
 <div id="benefititemsProduct" class="container benefit-items product-benefit">

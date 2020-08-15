@@ -117,7 +117,28 @@
   transform: translateX(0);
 }
 /* cards transition */
+/* cards transition  heren*/
+#multi-item2 .carousel-item.active,
+#multi-item2 .carousel-item-next,
+#multi-item2 .carousel-item-prev {
+  display: flex;
+}
 
+#multi-item2 .carousel-item-right.active,
+#multi-item2 .carousel-item-next {
+  transform: translateX(33.33%);
+}
+
+#multi-item2 .carousel-item-left.active, 
+#multi-item2 .carousel-item-prev {
+  transform: translateX(-33.33%)
+}
+
+#multi-item2 .carousel-item-right,
+#multi-item2 .carousel-item-left{ 
+  transform: translateX(0);
+}
+/* cards transition */
 
 #cntrlbtton, #cntrlbtton1 {
     border-radius: 50%;
