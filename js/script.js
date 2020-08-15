@@ -1,15 +1,6 @@
 
 //Account Aanmaken 
 document.getElementById("signUp").addEventListener('click',function (){
-<<<<<<< HEAD
-  // debugger
-let sEmail=document.getElementById('modalLRInput12');
-let sWachtwoord=document.getElementById('modalLRInput13');
-let sHerWachtwoord=document.getElementById('modalLRInput14');
-let url='http://localhost:3000/gebruikers'
-let newGebruiker={
-  login: sEmail.value,
-=======
 let sEmail=document.getElementById('modalLRInput12');
 let sGebruikersNaam=document.getElementById('modalLRInput13');
 let sWachtwoord=document.getElementById('modalLRInput14');
@@ -18,18 +9,13 @@ let url='http://localhost:3000/gebruikers'
 let newGebruiker={
   login: sEmail.value,
   gebruikersnaam:sGebruikersNaam.value,
->>>>>>> 809d8d43d760349f7f3e2740856abcd6bcfce4ca
   wachtwoord:sWachtwoord.value,
 }
 if((newGebruiker.login.length!==0 && newGebruiker.wachtwoord.length!==0)&& newGebruiker.wachtwoord ===sHerWachtwoord.value){
    const xhr = new XMLHttpRequest();
    xhr.open('POST', url, true);
    xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-<<<<<<< HEAD
-   xhr.onreadystatechange = ()=> {
-=======
    xhr.onreadystatechange = () => {
->>>>>>> 809d8d43d760349f7f3e2740856abcd6bcfce4ca
      if (xhr.readyState === 4 && xhr.status === 201){
        let serverResponse = JSON.parse(xhr.response);
        console.log(serverResponse)
@@ -37,14 +23,10 @@ if((newGebruiker.login.length!==0 && newGebruiker.wachtwoord.length!==0)&& newGe
    };
    xhr.send(JSON.stringify(newGebruiker));
   }
-<<<<<<< HEAD
-  sEmail.value=''
-=======
   sEmail.value='';
   sGebruikersNaam='';
   sWachtwoord='';
   sHerWachtwoord='';
->>>>>>> 809d8d43d760349f7f3e2740856abcd6bcfce4ca
 });
 
 
@@ -61,18 +43,12 @@ document.getElementById('logIn').addEventListener('click',function(){
   if(gebruikers.find(item=>{
      return item.login==sEmail.value && item.wachtwoord==sWachtwoord.value  
   })){
-<<<<<<< HEAD
-    sEmail.value='';
-    sWachtwoord.value='';
-    logInhtml();
-=======
     let cGebruiker=gebruikers.find(item=>{
     return item.login===sEmail.value})
     localStorage.setItem("cGebruiker", JSON.stringify(cGebruiker));
     sEmail.value='';
     sWachtwoord.value='';
     logInhtml()
->>>>>>> 809d8d43d760349f7f3e2740856abcd6bcfce4ca
   }else{
     sEmail.value='';
     sWachtwoord.value='';
@@ -81,27 +57,6 @@ document.getElementById('logIn').addEventListener('click',function(){
   }
   });
 
-<<<<<<< HEAD
-  
-
-
-
-  function logInhtml() {
-    var logul = document.getElementById("loginul");
-    logul.innerHTML = ` <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-      aria-haspopup="true" aria-expanded="false">Ihsan
-    </a>
-    <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-      <a id="afmelden" class="dropdown-item" onclick="afmeldenn()">Afmelden</a>
-      </div>
-      </li>`
-   }
-   
-   
-   function afmeldenn() {
-   var logull = document.getElementById("loginul");
-=======
 //controleer als anngemeled is
   function logInhtml() {
     let cGebruiker=JSON.parse(localStorage.getItem("cGebruiker"));
@@ -121,7 +76,6 @@ document.getElementById('logIn').addEventListener('click',function(){
    function afmeldenn() {
     localStorage.removeItem("cGebruiker");
     var logull = document.getElementById("loginul");
->>>>>>> 809d8d43d760349f7f3e2740856abcd6bcfce4ca
      logull.innerHTML= `
      <li class="nav-item">
            <a class="nav-link waves-effect waves-light" data-toggle="modal" data-target="#modalLRForm">
@@ -129,11 +83,6 @@ document.getElementById('logIn').addEventListener('click',function(){
            </a>
          </li>
      `;
-<<<<<<< HEAD
-   
-   }
-   
-=======
    }
 
 // Zet products om start pagina
@@ -155,5 +104,141 @@ document.getElementById('logIn').addEventListener('click',function(){
   }
 
  
+// Zet de producten in de dames.html
+function productCategoryDames() {
+  let url='http://localhost:3000/Products'
+   let req=new XMLHttpRequest();
+   req.open("GET",url,true);
+   req.send();
+   req.onload=function(){
+     var damesarray = [];
+   let Products=JSON.parse(req.responseText);
+   for(i=0;i<Products.length;i++){
+    if(Products[i].Categorie == 'Dames'){
+     damesarray.push(Products[i])
+    }
+}
+for(i=0;i<damesarray.length;i++) {
+  var damedivs = document.getElementsByClassName('Category-dames-product')[i];
+  damedivs.innerHTML = `
+  <div class="card">
 
->>>>>>> 809d8d43d760349f7f3e2740856abcd6bcfce4ca
+  <!-- Card image -->
+  <div class="view overlay">
+    <img class="card-img-top" src="${damesarray[i].src1}"
+      alt="Card image cap">
+    <a href="#!">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h4 class="card-title">${damesarray[i].Title}</h4>
+    <!-- Text -->
+    <p class="card-text"><b>Prijs:</b>${damesarray[i].prijs}</p>
+    <!-- Button -->
+    <a href="#" class="btn btn-primary">Button</a>
+
+  </div>
+
+</div>
+  `;
+}
+}
+}
+
+// Zet de producten in de mannen.html
+function productCategoryMannen() {
+  let url='http://localhost:3000/Products'
+   let req=new XMLHttpRequest();
+   req.open("GET",url,true);
+   req.send();
+   req.onload=function(){
+     var mannenarray = [];
+   let Products=JSON.parse(req.responseText);
+   for(i=0;i<Products.length;i++){
+    if(Products[i].Categorie == 'Mannen') {
+      mannenarray.push(Products[i])
+    }
+}
+for(i=0;i<mannenarray.length;i++) {
+  var mannendivs = document.getElementsByClassName('Category-mannen-product')[i];
+  mannendivs.innerHTML = `
+  <div class="card">
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <img class="card-img-top" src="${mannenarray[i].src1}"
+      alt="Card image cap">
+    <a href="#!">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h4 class="card-title">${mannenarray[i].Title}</h4>
+    <!-- Text -->
+    <p class="card-text"><b>Prijs:</b>${mannenarray[i].prijs}</p>
+    <!-- Button -->
+    <a href="#" class="btn btn-primary">Button</a>
+
+  </div>
+
+</div>
+  `;
+}
+}
+}
+
+
+// Zet de producten in de solden.html
+function productCategorySolden() {
+  let url='http://localhost:3000/Products'
+   let req=new XMLHttpRequest();
+   req.open("GET",url,true);
+   req.send();
+   req.onload=function(){
+     var soldenarray = [];
+   let Products=JSON.parse(req.responseText);
+   for(i=0;i<Products.length;i++){
+   if(Products[i].Categorie == 'Solden'){
+      soldenarray.push(Products[i])
+    }
+}
+for(i=0;i<soldenarray.length;i++) {
+  var soldendivs = document.getElementsByClassName('Category-solden-product')[i];
+  soldendivs.innerHTML = `
+  <div class="card">
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <img class="card-img-top" src="${soldenarray[i].src1}"
+      alt="Card image cap">
+    <a href="#!">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h4 class="card-title">${soldenarray[i].Title}</h4>
+    <!-- Text -->
+    <p class="card-text"><b>Prijs:</b>${soldenarray[i].prijs}</p>
+    <!-- Button -->
+    <a href="#" class="btn btn-primary">Button</a>
+
+  </div>
+
+</div>
+  `;
+}
+}
+}
