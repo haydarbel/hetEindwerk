@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Onze Eindwerk</title>
+  <title>Material Design for Bootstrap</title>
   <!-- MDB icon -->
   <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
   <!-- Font Awesome -->
@@ -17,9 +17,18 @@
   <link rel="stylesheet" href="css/mdb.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="css/style.css">
+  
+  <script>
+    window.onload=function(){
+  logInhtml()
+
+}
+
+
+  </script>
+
 </head>
 <body>
-
 
 
 
@@ -48,9 +57,9 @@
         </div>
       </li>
     </ul>
-    <ul class="navbar-nav ml-auto nav-flex-icons">
-      <li class="nav-item">
-        <a class="nav-link waves-effect waves-light" data-toggle="modal" data-target="#modalLRForm">
+    <ul  class="navbar-nav ml-auto nav-flex-icons">
+      <li id="loginul" class="nav-item">
+        <a   class="nav-link waves-effect waves-light" data-toggle="modal" data-target="#modalLRForm">
          Log-in
         </a>
       </li>
@@ -139,12 +148,12 @@
     <div class="carousel-item active">
       <div class="col-12 col-lg-4">
         <div class="card mb-2">
-          <img class="card-img-top" id="multiImg" src="img/women-1.jpg"
+          <img class="card-img-top" id="multiImg0" src="A"
             alt="Card image cap">
           <div class="card-body">
-            <h4 class="card-title font-weight-bold">Card 1</h4>
+            <h6 class="card-title font-weight-bold" id="multiText0">Card 1</h6>
             <p class="card-text"></p>
-            <a class="btn btn-primary btn-md btn-rounded">Button</a>
+            <a class="btn btn-primary btn-md btn-rounded">ontdek</a>
           </div>
         </div>
       </div>
@@ -152,12 +161,12 @@
     <div class="carousel-item">
       <div class="col-12 col-lg-4">
         <div class="card mb-2">
-          <img class="card-img-top" id="multiImg" src="img/women-2.jpg"
+          <img class="card-img-top" id="multiImg1" src="img/women-2.jpg"
             alt="Card image cap">
           <div class="card-body">
-            <h4 class="card-title font-weight-bold">Card 2</h4>
+            <h6 class="card-title font-weight-bold" id="multiText1">Card 2</h6>
             <p class="card-text"></p>
-            <a class="btn btn-primary btn-md btn-rounded">Button</a>
+            <a class="btn btn-primary btn-md btn-rounded">ontdek</a>
           </div>
         </div>
       </div>
@@ -165,12 +174,12 @@
     <div class="carousel-item">
       <div class="col-12 col-lg-4">
         <div class="card mb-2">
-          <img class="card-img-top" id="multiImg" src="img/women-3.jpg"
+          <img class="card-img-top" id="multiImg2" src="img/women-3.jpg"
             alt="Card image cap">
           <div class="card-body">
-            <h4 class="card-title font-weight-bold">Card 3</h4>
+            <h6 class="card-title font-weight-bold"id="multiText2">Card 3</h6>
             <p class="card-text"></p>
-            <a class="btn btn-primary btn-md btn-rounded">Button</a>
+            <a class="btn btn-primary btn-md btn-rounded">ontdek</a>
           </div>
         </div>
       </div>
@@ -178,12 +187,12 @@
     <div class="carousel-item">
       <div class="col-12 col-lg-4">
         <div class="card mb-2">
-          <img class="card-img-top" id="multiImg" src="img/women-4.jpg"
+          <img class="card-img-top" id="multiImg3" src="img/women-4.jpg"
             alt="Card image cap">
           <div class="card-body">
-            <h4 class="card-title font-weight-bold">Card 4</h4>
+            <h6 class="card-title font-weight-bold"id="multiText3">Card 4</h6>
             <p class="card-text"></p>
-            <a class="btn btn-primary btn-md btn-rounded">Button</a>
+            <a class="btn btn-primary btn-md btn-rounded"><p>ontdek</p></a>
           </div>
         </div>
       </div>
@@ -409,7 +418,6 @@
     <a href="https://mdbootstrap.com/"> Abdullah-Brahim-Haydar-Ihsan</a>
   </div>
   <!-- Copyright -->
-  
 
 </footer>
 <!-- Footer -->
@@ -457,7 +465,7 @@
                 <label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
               </div>
               <div class="text-center mt-2">
-                <button class="btn btn-info" id="logIn">Log in <i class="fas fa-sign-in ml-1"></i></button>
+                <button id="logIn" class="btn btn-info">Log in <i class="fas fa-sign-in ml-1"></i></button>
               </div>
             </div>
             <!--Footer-->
@@ -482,21 +490,26 @@
                 <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
                 <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
               </div>
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-user prefix"></i>
+                <input type="text" id="modalLRInput13" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput13">Gebruikers naam</label>
+              </div>
 
               <div class="md-form form-sm mb-5">
                 <i class="fas fa-lock prefix"></i>
-                <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
-                <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
+                <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput14">Your password</label>
               </div>
 
               <div class="md-form form-sm mb-4">
                 <i class="fas fa-lock prefix"></i>
-                <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
-                <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
+                <input type="password" id="modalLRInput15" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput15">Repeat password</label>
               </div>
 
               <div class="text-center form-sm mt-2">
-                <button class="btn btn-info" id="signUp">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+                <button id="signUp" class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
               </div>
 
             </div>
@@ -519,13 +532,6 @@
 <!--Modal: Login / Register Form-->
 
 
-
-
-
-
-  <!-- End your project here-->
-
-
   <!-- jQuery -->
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <!-- Bootstrap tooltips -->
@@ -534,13 +540,9 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
-  
-  <script src="js/script.js"></script>
   <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"></script>
+  <script type="text/javascript" src="js/script.js" ></script>
   <script type="text/javascript" src="js/mijnn.js"></script>
 
 </body>
 </html>
-
-<input type="number" name="name" id="id" />

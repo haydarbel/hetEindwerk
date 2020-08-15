@@ -19,35 +19,64 @@
   <link rel="stylesheet" href="css/style.css">
   <script>
     window.onload=function(){
-    winkelkarretje=JSON.parse(localStorage.getItem("wnkl"));
-    tabel();
- }
-
- function verwijder(){
-    var bverwijder=document.querySelector('#spellist');
-    bverwijder.addEventListener('click',function(e){
-    var nVerw; 
-    if(e.target.id){
-       nVerw=e.target.id
-    }else{
-      var font=e.target;
-      nVerw=font.parentElement.id;
+      tabel()
+      logInhtml();
     }
-    if(Number.isInteger(parseInt(nVerw))){
-    winkelkarretje.splice(nVerw,1);
-    localStorage.setItem("names", JSON.stringify(winkelkarretje));
-    var logoWK=document.getElementsByClassName("fas fa-shopping-cart")[0]
-    logoWK.innerHTML=winkelkarretje.length
-    tabel()
-    }},false);
-    } 
-
-  function tabel(){
-  kTabel="<table class='table'>\n";
-      kTabel+="<thead class='black white-text'>";
-      kTabel+='<tr><th scope="col">#</th><th scope="col">Naam</th><th scope="col">Prijs</th><th scope="col">Aantal</th> <th scope="col"></th></tr></thead>'
-      kTabel+='<tbody id="spellist">'
-      var totalPrijs=0
+   
+    function logInhtml() {
+      let cGebruiker=JSON.parse(localStorage.getItem("cGebruiker"));
+      if (cGebruiker){
+        var logul = document.getElementById("loginul");
+        logul.innerHTML = ` <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">${cGebruiker.gebruikersnaam}
+          </a>
+          <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+            <a id="afmelden" class="dropdown-item" onclick="afmeldenn()">Afmelden</a>
+            </div>
+            </li>`
+          }
+        }
+   
+    function afmeldenn() {
+          localStorage.removeItem("cGebruiker");
+          var logull = document.getElementById("loginul");
+          logull.innerHTML= `
+          <li class="nav-item">
+            <a class="nav-link waves-effect waves-light" data-toggle="modal" data-target="#modalLRForm">
+              Log-in
+              </a>
+              </li>
+              `;
+              
+            }
+   
+    function verwijder(){
+              var bverwijder=document.querySelector('#spellist');
+              bverwijder.addEventListener('click',function(e){
+                var nVerw; 
+                if(e.target.id){
+                  nVerw=e.target.id
+                }else{
+                  var font=e.target;
+                  nVerw=font.parentElement.id;
+                }
+                if(Number.isInteger(parseInt(nVerw))){
+                  winkelkarretje.splice(nVerw,1);
+                  localStorage.setItem("names", JSON.stringify(winkelkarretje));
+                  var logoWK=document.getElementsByClassName("fas fa-shopping-cart")[0]
+                  logoWK.innerHTML=winkelkarretje.length
+                  tabel()
+                }},false);
+              } 
+    
+    function tabel(){
+                winkelkarretje=JSON.parse(localStorage.getItem("wnkl"));
+                kTabel="<table class='table'>\n";
+                  kTabel+="<thead class='black white-text'>";
+                    kTabel+='<tr><th scope="col">#</th><th scope="col">Naam</th><th scope="col">Prijs</th><th scope="col">Aantal</th> <th scope="col"></th></tr></thead>'
+                    kTabel+='<tbody id="spellist">'
+                      var totalPrijs=0
         for (var i=0; i < winkelkarretje.length; i++) {
           kTabel+="<tr class='delete'>"
           kTabel+=`<th scope="row">${i+1}</th>`
@@ -67,7 +96,8 @@
         document.getElementById('prijsTabel').innerHTML=kTabel;
         verwijder()
  }
-  </script>
+ 
+ </script>
 </head>
 <body>
 
@@ -99,7 +129,7 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto nav-flex-icons">
-        <li class="nav-item">
+        <li id="loginul" class="nav-item">
           <a class="nav-link waves-effect waves-light" data-toggle="modal" data-target="#modalLRForm">
            Log-in
           </a>
