@@ -159,24 +159,6 @@
       "id": 10
     },
     {
-<<<<<<< HEAD
-      "login": "a@a.com",
-      "gebruikersnaam": "Abdullah",
-      "wachtwoord": "123",
-      "id": 11
-    },
-    {
-      "login": "a@a.com",
-      "gebruikersnaam": "Abdullah",
-      "wachtwoord": "123",
-      "id": 12
-    },
-    {
-      "login": "a",
-      "gebruikersnaam": "a",
-      "wachtwoord": "a",
-      "id": 13
-=======
       "login": "ihsandcn@asf",
       "gebruikersnaam": "ihsan",
       "wachtwoord": "asdfg",
@@ -205,7 +187,6 @@
       "gebruikersnaam": "hay",
       "wachtwoord": "890",
       "id": 15
->>>>>>> 2abfcbe3ce5c3c68be6c86f8b130b7fb6b503bb0
     }
   ]
 }

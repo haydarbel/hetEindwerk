@@ -48,7 +48,6 @@ document.getElementById('logIn').addEventListener('click',function(){
     localStorage.setItem("cGebruiker", JSON.stringify(cGebruiker));
     sEmail.value='';
     sWachtwoord.value='';
-   window.location='index.html';
     logInhtml()
   }else{
     sEmail.value='';
@@ -67,8 +66,8 @@ document.getElementById('logIn').addEventListener('click',function(){
       <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
       aria-haspopup="true" aria-expanded="false">${cGebruiker.gebruikersnaam}
       </a>
-      <div id='afmeldenD' class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-        <a class="btn btn-danger btn-md btn-rounded" onclick="afmeldenn()">Afmelden</a>
+      <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+        <a id="afmelden" class="dropdown-item" onclick="afmeldenn()">Afmelden</a>
         </div>
       </li>`
     }
