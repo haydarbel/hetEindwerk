@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design for Bootstrap</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    window.onload=function(){
+      logInhtml()
+      productCategoryMannen() 
+    }
+    
+          function logInhtml() {
+            let cGebruiker=JSON.parse(localStorage.getItem("cGebruiker"));
+            if (cGebruiker){
+            var logul = document.getElementById("loginul");
+            logul.innerHTML = ` <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">${cGebruiker.gebruikersnaam}
+              </a>
+              <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+                <a id="afmelden" class="dropdown-item" onclick="afmeldenn()">Afmelden</a>
+                </div>
+              </li>`
+            }
+           }
+         
+           function afmeldenn() {
+          localStorage.removeItem("cGebruiker");
+          var logull = document.getElementById("loginul");
+           logull.innerHTML= `
+           <li class="nav-item">
+                 <a class="nav-link waves-effect waves-light" data-toggle="modal" data-target="#modalLRForm">
+                  Log-in
+                 </a>
+               </li>
+           `;
+         
+         }
+ 
+ </script>
+</head>
+<body>
+
+<!--Begint Uw Project Hier-->
+
+ <!--Navbar -->
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark black">
+  <a class="navbar-brand fab fa-shopware" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Categorieen
+        </a>
+        <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+          <a class="dropdown-item" href="Mannen.html">Heren</a>
+          <a class="dropdown-item" href="Dames.html">Dames</a>
+          <a class="dropdown-item" href="Solden.html">Solden</a>
+        </div>
+      </li>
+    </ul>
+    <ul  class="navbar-nav ml-auto nav-flex-icons">
+      <li id="loginul" class="nav-item">
+        <a   class="nav-link waves-effect waves-light" data-toggle="modal" data-target="#modalLRForm">
+         Log-in
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="WinkelMandje.html" class="nav-link waves-effect waves-light">
+          <i class="fas fa-shopping-cart"><span id="antaalmandje">0</span></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--/.Navbar -->
+
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3 Category-mannen-product"></div>
+      <div class="col-md-3 Category-mannen-product"></div>
+      <div class="col-md-3 Category-mannen-product"></div>
+      <div class="col-md-3 Category-mannen-product"></div>
+    </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<!--Benefit Items Begint-->
+<div id="benefititems" class="container benefit-items product-benefit">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="single-benefit">
+                <div class="sb-icon">
+                    <img src="img/icon-1.png" alt="">
+                </div>
+                <div class="sb-text">
+                    <h6>Free Shipping</h6>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="single-benefit">
+                <div class="sb-icon">
+                    <img src="img/icon-2.png" alt="">
+                </div>
+                <div class="sb-text">
+                    <h6>Delivery On Time</h6>
+                    <p>If good have prolems</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="single-benefit">
+                <div class="sb-icon">
+                    <img src="img/icon-1.png" alt="">
+                </div>
+                <div class="sb-text">
+                    <h6>Secure Payment</h6>
+                    <p>100% secure payment</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!--Benefit Items Ends-->
+
+
+<!-- Footer -->
+<footer class="footer1 page-footer font-small special-color-dark pt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+  
+      <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="sociaal-fb" class="btn-floating btn-fb mx-1">
+            <i class="fab fa-facebook-f"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="sociaal-tw" class="btn-floating btn-tw mx-1">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="sociaal-gp"class="btn-floating btn-gplus mx-1">
+            <i class="fab fa-google-plus-g"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="sociaal-li"class="btn-floating btn-li mx-1">
+            <i class="fab fa-linkedin-in"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="sociaal-dr"class="btn-floating btn-dribbble mx-1">
+            <i class="fab fa-dribbble"> </i>
+          </a>
+        </li>
+      </ul>
+      <!-- Social buttons -->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://mdbootstrap.com/"> Abdullah-Brahim-Haydar-Ihsan</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+  
+
+
+<!--Modal: Login / Register Form-->
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Modal cascading tabs-->
+      <div class="modal-c-tabs">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
+              Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
+              Register</a>
+          </li>
+        </ul>
+
+        <!-- Tab panels -->
+        <div class="tab-content">
+          <!--Panel 7-->
+          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body mb-1">
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-envelope prefix"></i>
+                <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput10">Your email</label>
+              </div>
+
+              <div class="md-form form-sm mb-4">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
+              </div>
+              <div class="text-center mt-2">
+                <button id="logIn" class="btn btn-info">Log in <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-center text-md-right mt-1">
+                <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
+                <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+          <!--/.Panel 7-->
+
+          <!--Panel 8-->
+          <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body">
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-envelope prefix"></i>
+                <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
+              </div>
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-user prefix"></i>
+                <input type="text" id="modalLRInput13" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput13">Gebruikers naam</label>
+              </div>
+
+            
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-lock prefix"></i>
+
+
+                <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput14">Your password</label>
+              </div>
+
+              <div class="md-form form-sm mb-4">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput15" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput15">Repeat password</label>
+              </div>
+
+              <div class="text-center form-sm mt-2">
+                <button id="signUp" class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-right">
+                <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!--/.Panel 8-->
+        </div>
+
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Login / Register Form-->
+
+
+<!--End Project Hier-->
+
+   <!-- jQuery -->
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+   <!-- Bootstrap tooltips -->
+   <script type="text/javascript" src="js/popper.min.js"></script>
+   <!-- Bootstrap core JavaScript -->
+   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+   <!-- MDB core JavaScript -->
+   <script type="text/javascript" src="js/mdb.min.js"></script>
+   <!-- Your custom scripts (optional) -->
+   <script type="text/javascript" src="js/script.js"></script>
+   <script type="text/javascript" src="js/mijnn.js"></script>
+ 
+ </body>
+ </html>
