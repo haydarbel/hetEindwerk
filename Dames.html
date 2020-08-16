@@ -21,6 +21,7 @@
     window.onload=function(){
       productCategoryDames()
       logInhtml()
+      productTel()
     }
     
           function logInhtml() {
@@ -38,7 +39,7 @@
             }
            }
          
-           function afmeldenn() {
+          function afmeldenn() {
           localStorage.removeItem("cGebruiker");
           var logull = document.getElementById("loginul");
            logull.innerHTML= `
@@ -50,6 +51,7 @@
            `;
          
          }
+  
   
   </script>
 </head>
@@ -94,7 +96,7 @@
       </li>
       <li class="nav-item">
         <a href="WinkelMandje.html" class="nav-link waves-effect waves-light">
-          <i class="fas fa-shopping-cart"><span id="antaalmandje">0</span></i>
+          <i class="fas fa-shopping-cart"><span id="aantalmandje">0</span></i>
         </a>
       </li>
     </ul>

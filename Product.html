@@ -19,22 +19,11 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/product.css">
   <script>
-   
-   window.onload=function(){
-   
-    logInhtml()
     
-    productZet()
     
-    toevoegen()
-  }
-
-
-
-
     function logInhtml() {
+      console.log('hello')
       let cGebruiker=JSON.parse(localStorage.getItem("cGebruiker"));
-      console.log('hello world')
       if (cGebruiker){
       var logul = document.getElementById("loginul");
       logul.innerHTML = ` <li class="nav-item dropdown">
@@ -45,13 +34,6 @@
           <a id="afmelden" class="dropdown-item" onclick="afmeldenn()">Afmelden</a>
           </div>
         </li>`
-      }else{
-      winkelMandje=JSON.parse(localStorage.getItem("winkelmandje"))
-      let logoWK=document.getElementById("antaalmandje");
-      let counter=0
-      winkelMandje.forEach(Element=>
-      counter+=Element.aantal)
-      logoWK.innerHTML=counter;
       }
      }
     
@@ -84,11 +66,9 @@
     }
    }
   
-
     function toevoegen(){
      let bToeVoeg=document.getElementById("toevoegen");
      bToeVoeg.addEventListener('click',function(){
-       console.log('hello World')
        let oToegevoegd=JSON.parse(localStorage.getItem('CurrentProduct'));
        oToegevoegd.aantal=parseInt(document.getElementById('aantal').value);
        oToegevoegd.kleur=document.getElementById('kleur').value;
@@ -103,11 +83,12 @@
           return item.naam===oToegevoegd.naam&&item.maat===oToegevoegd.maat&& 
            item.kleur===oToegevoegd.kleur
           })
-          console.log(dezelfde)
           dezelfde.aantal+=oToegevoegd.aantal
+          console.log(WinkelMandje)
           localStorage.setItem("winkelmandje",JSON.stringify(WinkelMandje))
           }else{
             WinkelMandje.push(oToegevoegd)
+            console.log(WinkelMandje)
             localStorage.setItem("winkelmandje",JSON.stringify(WinkelMandje))
           }
         } else{
@@ -117,15 +98,37 @@
        oToegevoegd.kleur=document.getElementById('kleur').value;
        oToegevoegd.maat= document.getElementById('maat').value;
        WinkelMandje.push(oToegevoegd);
-       localStorage.setItem("winkelmandje",JSON.stringify(WinkelMandje))
        console.log(WinkelMandje)
+       localStorage.setItem("winkelmandje",JSON.stringify(WinkelMandje))
       }
+      let winkelMandje=JSON.parse(localStorage.getItem("winkelmandje"))
+      let logoWK=document.getElementById('aantalmandje')
+      let counter=0
+      winkelMandje.forEach(Element=>
+      counter+=Element.aantal)
+      logoWK.innerHTML=counter;
   },false);
    }
       
+    function productTel(){
+      let winkelMandje=JSON.parse(localStorage.getItem("winkelmandje"))
+      let logoWK=document.getElementById('aantalmandje')
+      let counter=0
+      winkelMandje.forEach(Element=>
+      counter+=Element.aantal)
+      logoWK.innerHTML=counter;
+    }
 
-
-
+   window.onload=function(){
+     
+     productZet()
+     
+     logInhtml()
+     
+     toevoegen()
+      
+     productTel()
+    }
 
   </script>
 </head>
@@ -166,7 +169,7 @@
       </li>
       <li class="nav-item">
         <a href="WinkelMandje.html" class="nav-link waves-effect waves-light">
-          <i class="fas fa-shopping-cart"><span id="antaalmandje">0</span></i>
+          <i class="fas fa-shopping-cart"><span id="aantalmandje">0</span></i>
         </a>
       </li>
     </ul>
@@ -235,7 +238,8 @@
   <div class="col-md-6">
   <label for="size">MAAT</label>
   <select id="maat" name="size" class="form-control">
-  <option selected="selected">S</option>
+  <option selected="selected">Kies</option>
+  <option >S</option>
   <option>M</option>
   <option>L</option>
   <option>XL</option>
@@ -244,8 +248,9 @@
   <div class="col-md-6">
   <label for="color"><b>KLEUR</b></label>
   <select id="kleur" name="color" class="form-control">
-  <option selected="selected">Blue</option>
+  <option selected="selected">Kies</option>
   <option>Green</option>
+  <option>Blue</option>
   <option>Red</option>
   </select>
   </div>

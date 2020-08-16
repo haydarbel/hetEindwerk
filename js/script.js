@@ -277,3 +277,15 @@ for(i=0;i<soldenarray.length;i++) {
 }
 }
 }
+
+//Count number of teh products
+function productTel(){
+  let winkelMandje=JSON.parse(localStorage.getItem("winkelmandje"))
+  let logoWK=document.getElementById('aantalmandje')
+  let counter=0
+  winkelMandje.forEach(Element=>
+  counter+=Element.aantal)
+  logoWK.innerHTML=counter;
+}
+
+
