@@ -19,8 +19,22 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/product.css">
   <script>
+   
+   window.onload=function(){
+   
+    logInhtml()
+    
+    productZet()
+    
+    toevoegen()
+  }
+
+
+
+
     function logInhtml() {
       let cGebruiker=JSON.parse(localStorage.getItem("cGebruiker"));
+      console.log('hello world')
       if (cGebruiker){
       var logul = document.getElementById("loginul");
       logul.innerHTML = ` <li class="nav-item dropdown">
@@ -31,6 +45,13 @@
           <a id="afmelden" class="dropdown-item" onclick="afmeldenn()">Afmelden</a>
           </div>
         </li>`
+      }else{
+      winkelMandje=JSON.parse(localStorage.getItem("winkelmandje"))
+      let logoWK=document.getElementById("antaalmandje");
+      let counter=0
+      winkelMandje.forEach(Element=>
+      counter+=Element.aantal)
+      logoWK.innerHTML=counter;
       }
      }
     
@@ -63,9 +84,11 @@
     }
    }
   
-    function toevogen(){
+
+    function toevoegen(){
      let bToeVoeg=document.getElementById("toevoegen");
      bToeVoeg.addEventListener('click',function(){
+       console.log('hello World')
        let oToegevoegd=JSON.parse(localStorage.getItem('CurrentProduct'));
        oToegevoegd.aantal=parseInt(document.getElementById('aantal').value);
        oToegevoegd.kleur=document.getElementById('kleur').value;
@@ -95,22 +118,11 @@
        oToegevoegd.maat= document.getElementById('maat').value;
        WinkelMandje.push(oToegevoegd);
        localStorage.setItem("winkelmandje",JSON.stringify(WinkelMandje))
+       console.log(WinkelMandje)
       }
-      WinkelMandje=JSON.parse(localStorage.getItem("winkelmandje"))
-      let logoWK=document.getElementById("aantalmandje");
-      logoWK.innerHTML=WinkelMandje.length
-  });
+  },false);
    }
       
-
-   window.onload=function(){
-    logInhtml()
-    
-    productZet()
-
-    toevogen()
-  }
-
 
 
 
@@ -245,7 +257,7 @@
   <input id="aantal" type="number" name="quantity" min="0" value="1">
   
   </form>
-  <a href="#" id='toevoegen' class="round-black-btn">VOEG TO</a>
+  <a href="#"  id='toevoegen' class="round-black-btn">In WinkelMandje</a>
   </div>
   <!--Benefit Items Begint-->
 <div id="benefititemsProduct" class="container benefit-items product-benefit">

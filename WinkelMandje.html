@@ -18,9 +18,13 @@
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="css/style.css">
   <script>
+    let winkelMandje=JSON.parse(localStorage.getItem("winkelmandje"));
+
     window.onload=function(){
   
       logInhtml();
+
+      tabel()
     }
    
     function logInhtml() {
@@ -51,6 +55,75 @@
               
             }
    
+    function tabel(){
+  let kTabel="<table class='table'>\n";
+  let totalPrijs=0
+      kTabel+="<thead class='black white-text'>";
+      kTabel+='<tr><th scope="col">#</th><th scope="col">Productnaam</th><th scope="col">Kledingmaat</th><th scope="col">Kleur</th><th scope="col">Prijs per stuk</th><th scope="col">Aantal</th><th scope="col">Subtotaal</th><th scope="col"></th></tr></thead>'
+      kTabel+='<tbody id="alleList">'
+        for (let i=0; i < winkelMandje.length; i++) {
+          let stukPrijs=parseInt(winkelMandje[i].prijs)*winkelMandje[i].aantal
+          kTabel+="<tr class='delete'>"
+          kTabel+=`<th scope="row">${i+1}</th>`
+          kTabel+= "<td>"+winkelMandje[i]["Title"]+"</td>";
+          kTabel+= "<td>"+winkelMandje[i]["maat"]+"</td>";
+          kTabel+= "<td>"+winkelMandje[i]["kleur"]+"</td>";
+          kTabel+= "<td>"+winkelMandje[i].prijs+"</td>";
+          kTabel+="<td><input type='number' name='name' value="+winkelMandje[i].aantal+" id='aantal"+[i]+"'/></td>";
+          kTabel+= "<td>"+stukPrijs+"€</td>";
+          kTabel+= '<td><a id="'+[i]   
+          kTabel+= '" class="btn-sm btn-danger">';
+          kTabel+= '<i class="fas fa-trash-alt"></i></a></td>';
+          totalPrijs+=stukPrijs;
+          kTabel+="</tr>\n"
+      }
+      kTabel+='<tr><th colspan="3"><span>Total Prijs:'+totalPrijs;
+        kTabel+= "€</span></th></tr>\n"
+        kTabel+="</tbody>\n"
+        kTabel+="</table>\n"
+        document.getElementById('prijsTabel').innerHTML=kTabel;
+        let logoWK=document.getElementById('aantalmandje')
+        let counter=0
+        winkelMandje.forEach(Element=>
+        counter+=Element.aantal)
+        logoWK.innerHTML=counter;
+        verwijder()
+        bijwerken()
+ }
+
+    function verwijder(){
+    let bVerwijder=document.querySelector('#alleList');
+    bVerwijder.addEventListener('click',function(e){
+    var nVerw; 
+    if(e.target.id){
+       nVerw=e.target.id
+    }else{
+      var font=e.target;
+      nVerw=font.parentElement.id;
+    }
+    if(Number.isInteger(parseInt(nVerw))){
+    winkelMandje.splice(nVerw,1);
+    localStorage.setItem("winkelmandje", JSON.stringify(winkelMandje));
+    tabel()
+    }},false);
+    }
+
+    function bijwerken(){
+    var bverwijder=document.querySelector('#alleList');
+    bverwijder.addEventListener('change',function(e){
+    let gekozenSpel=e.target.parentElement.parentElement.firstElementChild.nextElementSibling.textContent;
+    for(let i=0; i<winkelMandje.length;i++){
+      if (winkelMandje[i].Title===gekozenSpel){
+        winkelMandje[i].aantal=parseInt(e.target.value);
+        localStorage.setItem("winkelmandje", JSON.stringify(winkelMandje));
+        tabel()
+      }
+    }
+  },false);
+
+ }
+
+
  </script>
 </head>
 <body>
@@ -89,7 +162,7 @@
       </li>
       <li class="nav-item">
         <a href="WinkelMandje.html" class="nav-link waves-effect waves-light">
-          <i class="fas fa-shopping-cart"><span id="antaalmandje">0</span></i>
+          <i class="fas fa-shopping-cart"><span id="aantalmandje">0</span></i>
         </a>
       </li>
     </ul>
