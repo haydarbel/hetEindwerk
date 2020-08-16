@@ -136,11 +136,11 @@ for(i=0;i<damesarray.length;i++) {
   <div class="card-body">
 
     <!-- Title -->
-    <h4 class="card-title">${damesarray[i].Title}</h4>
+    <h5 class="card-title">${damesarray[i].Title}</h5>
     <!-- Text -->
     <p class="card-text"><b>Prijs:</b>${damesarray[i].prijs}</p>
     <!-- Button -->
-    <a href="#" class="btn btn-primary">Button</a>
+    <a href="#" class="btn btn-warning">Button</a>
 
   </div>
 
@@ -167,7 +167,7 @@ function productCategoryMannen() {
 for(i=0;i<mannenarray.length;i++) {
   var mannendivs = document.getElementsByClassName('Category-mannen-product')[i];
   mannendivs.innerHTML = `
-  <div class="card">
+  <div  class="card">
 
   <!-- Card image -->
   <div class="view overlay">
@@ -179,14 +179,14 @@ for(i=0;i<mannenarray.length;i++) {
   </div>
 
   <!-- Card content -->
-  <div class="card-body">
+  <div class="card-body flex-fill">
 
     <!-- Title -->
-    <h4 class="card-title">${mannenarray[i].Title}</h4>
+    <h5 class="card-title">${mannenarray[i].Title}</h5>
     <!-- Text -->
     <p class="card-text"><b>Prijs:</b>${mannenarray[i].prijs}</p>
     <!-- Button -->
-    <a href="#" class="btn btn-primary">Button</a>
+    <a id="mannenbutton" href="#" class="btn btn-warning">Button</a>
 
   </div>
 
@@ -229,11 +229,11 @@ for(i=0;i<soldenarray.length;i++) {
   <div class="card-body">
 
     <!-- Title -->
-    <h4 class="card-title">${soldenarray[i].Title}</h4>
+    <h5 class="card-title">${soldenarray[i].Title}</h5>
     <!-- Text -->
     <p class="card-text"><b>Prijs:</b>${soldenarray[i].prijs}</p>
     <!-- Button -->
-    <a href="#" class="btn btn-primary">Button</a>
+    <a href="#" class="btn btn-warning">Button</a>
 
   </div>
 
