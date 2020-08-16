@@ -69,7 +69,6 @@
     function toevoegen(){
       let bToeVoeg=document.getElementById("toevoegen");
       bToeVoeg.addEventListener('click',function(){
-        debugger
        let oToegevoegd=JSON.parse(localStorage.getItem('CurrentProduct'));
        oToegevoegd.aantal=parseInt(document.getElementById('aantal').value);
        oToegevoegd.kleur=document.getElementById('kleur').value;

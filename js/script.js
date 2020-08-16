@@ -104,22 +104,25 @@ document.getElementById('logIn').addEventListener('click',function(){
 // van index tot Product pagina
 function naarProduct(){
     var eKnop=document.getElementById('multi-item');
-    var eKnop2=document.getElementById('multi-item2');
     eKnop.addEventListener('click',function(e){
-    if(e.target.tagName.toLowerCase()==="a"){
-    let ProductNaam=e.target.previousElementSibling.previousElementSibling.textContent;
-    let url='http://localhost:3000/Products'
-    req=new XMLHttpRequest();
-    req.open("GET",url,true);
-    req.send();
-    req.onload=function(){
-    let aProducts=JSON.parse(req.responseText);
-    let oGekozen=aProducts.find(item=>{
-      return item.Title===ProductNaam});
-    localStorage.setItem('CurrentProduct',JSON.stringify(oGekozen))
-      }
-     }    
-    });
+      if(e.target.tagName.toLowerCase()==="a"){
+        let ProductNaam=e.target.previousElementSibling.previousElementSibling.textContent;
+        let url='http://localhost:3000/Products'
+        req=new XMLHttpRequest();
+        req.open("GET",url,true);
+        req.send();
+        req.onload=function(){
+          let aProducts=JSON.parse(req.responseText);
+          let oGekozen=aProducts.find(item=>{
+            return item.Title===ProductNaam});
+            localStorage.setItem('CurrentProduct',JSON.stringify(oGekozen))
+          }
+        }    
+      });
+    }
+// van index tot Product pagina
+function naarProduct2(){
+    var eKnop2=document.getElementById('multi-item2');
     eKnop2.addEventListener('click',function(e){
     if(e.target.tagName.toLowerCase()==="a"){
     let ProductNaam=e.target.previousElementSibling.previousElementSibling.textContent;
@@ -175,7 +178,7 @@ for(i=0;i<damesarray.length;i++) {
     <!-- Text -->
     <p class="card-text"><b>Prijs:</b>${damesarray[i].prijs}</p>
     <!-- Button -->
-    <a href="#" class="btn btn-primary">Button</a>
+    <a href="Product.html" id="" class="btn btn-primary">Button</a>
 
   </div>
 
@@ -221,7 +224,7 @@ for(i=0;i<mannenarray.length;i++) {
     <!-- Text -->
     <p class="card-text"><b>Prijs:</b>${mannenarray[i].prijs}</p>
     <!-- Button -->
-    <a href="#" class="btn btn-primary">Button</a>
+    <a href="Product.html" class="btn btn-primary">Button</a>
 
   </div>
 
@@ -265,7 +268,7 @@ for(i=0;i<soldenarray.length;i++) {
     <!-- Text -->
     <p class="card-text"><b>Prijs:</b>${soldenarray[i].prijs}</p>
     <!-- Button -->
-    <a href="#" class="btn btn-primary">Button</a>
+    <a href="Product.html" class="btn btn-primary">Button</a>
 
   </div>
 
