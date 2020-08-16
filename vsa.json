@@ -78,7 +78,7 @@
       "src1": "img/products/Mannen Korte Broek2.jpg",
       "src2": "img/products/Mannen Korte Broek3.jpg",
       "prijs": "18€",
-      "descriptie": "Stijl:Casual   Materiaal:COTTON    Lengte:Knee   LengthMiddel:Mid   Afdichtingen:Elastic Waist   Patronen:Solid   Pant Style:REGULAR"
+      "descriptie": " <br>Stijl:Casual  <br> Materiaal:COTTON  <br>  Lengte:Knee  <br> LengthMiddel:Mid  <br> Afdichtingen:Elastic Waist <br>  Patronen:Solid <br>  Pant Style:REGULAR"
     },
     {
       "id": 9,
@@ -88,7 +88,7 @@
       "src1": "img/products/Korting Dames Fietsen2.jpg",
       "src2": "img/products/Korting Dames Fietsen3.jpg",
       "prijs": "39€",
-      "descriptie": "Materiaal:Polyester   Mouwlengte(cm):Vol   Geslacht:Vrouw    Seizoen:Veer,Summer,Autumn,Winter   Zipper Length:Full Zipper   Fit:Past qua maat, nemen uw normale grootte   Stof:Broadcloth"
+      "descriptie": " <br>Materiaal:Polyester  <br> Mouwlengte(cm):Vol <br>  Geslacht:Vrouw   <br> Seizoen:Veer,Summer,Autumn,Winter <br>  Zipper Length:Full Zipper  <br> Fit:Past qua maat, nemen uw normale grootte   Stof:Broadcloth"
     },
     {
       "id": 10,
@@ -98,7 +98,7 @@
       "src1": "img/products/Mannen Joggingbroek2.jpg",
       "src2": "img/products/Mannen Joggingbroek3.jpg",
       "prijs": "9€",
-      "descriptie": "Merknaam:ASTFSC   Pant Style:Cargo Pants   Lengte:Ankle-Length Pants   Frontstijl:Platgeplooid   Pas:Loose   Materiaal:COTTON   Geslacht:MEN   Stof:Broadcloth   Afdichtingen:Drawstring"
+      "descriptie": "<br> Merknaam:ASTFSC  <br> Pant Style:Cargo Pants  <br> Lengte:Ankle-Length Pants <br>  Frontstijl:Platgeplooid <br>  Pas:Loose  <br> Materiaal:COTTON  <br> Geslacht:MEN <br>  Stof:Broadcloth <br>  Afdichtingen:Drawstring"
     },
     {
       "id": 11,
@@ -113,46 +113,6 @@
   ],
   "Gebruikers": [
     {
-      "id": 1,
-      "login": "vsa.haydar@gmail.com",
-      "wachtwoord": "vsaHeverlee"
-    },
-    {
-      "id": 2,
-      "login": "vsa.haydar@gmail.com",
-      "wachtwoord": "vsaHeverlee"
-    },
-    {
-      "login": "vsa.haar@gmail.com",
-      "wachtwoord": "vsaHerlee",
-      "id": 3
-    },
-    {
-      "login": "vsa.haydar@live.com",
-      "wachtwoord": "1234",
-      "id": 4
-    },
-    {
-      "login": "aaaa",
-      "wachtwoord": "zzzz",
-      "id": 5
-    },
-    {
-      "login": "haydar@live.com",
-      "wachtwoord": "1234",
-      "id": 6
-    },
-    {
-      "login": "hay",
-      "wachtwoord": "aaa",
-      "id": 8
-    },
-    {
-      "login": "isa",
-      "wachtwoord": "1234",
-      "id": 9
-    },
-    {
       "login": "haydar@gmail.com",
       "gebruikersnaam": "haydar",
       "wachtwoord": "1234",
@@ -163,18 +123,6 @@
       "gebruikersnaam": "ihsan",
       "wachtwoord": "asdfg",
       "id": 11
-    },
-    {
-      "login": "asdfg",
-      "gebruikersnaam": "ihsan",
-      "wachtwoord": "12345",
-      "id": 12
-    },
-    {
-      "login": "ihsan111",
-      "gebruikersnaam": "ihs",
-      "wachtwoord": "12",
-      "id": 13
     },
     {
       "login": "ahah",
