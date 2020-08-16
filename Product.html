@@ -67,16 +67,18 @@
    }
   
     function toevoegen(){
-     let bToeVoeg=document.getElementById("toevoegen");
-     bToeVoeg.addEventListener('click',function(){
+      let bToeVoeg=document.getElementById("toevoegen");
+      bToeVoeg.addEventListener('click',function(){
+        debugger
        let oToegevoegd=JSON.parse(localStorage.getItem('CurrentProduct'));
        oToegevoegd.aantal=parseInt(document.getElementById('aantal').value);
        oToegevoegd.kleur=document.getElementById('kleur').value;
        oToegevoegd.maat= document.getElementById('maat').value;
+       console.log(oToegevoegd)
        if(JSON.parse(localStorage.getItem("winkelmandje"))){
          let WinkelMandje=JSON.parse(localStorage.getItem("winkelmandje")) 
          if(WinkelMandje.find(item=>{
-           return item.naam===oToegevoegd.naam && item.maat===oToegevoegd.maat && 
+           return item.Title===oToegevoegd.Title && item.maat===oToegevoegd.maat && 
            item.kleur===oToegevoegd.kleur
           })){
           let dezelfde=WinkelMandje.find(item=>{
@@ -125,9 +127,9 @@
      
      logInhtml()
      
-     toevoegen()
-      
      productTel()
+
+     toevoegen()
     }
 
   </script>
@@ -238,8 +240,7 @@
   <div class="col-md-6">
   <label for="size">MAAT</label>
   <select id="maat" name="size" class="form-control">
-  <option selected="selected">Kies</option>
-  <option >S</option>
+  <option selected="selected">S</option>
   <option>M</option>
   <option>L</option>
   <option>XL</option>
@@ -248,8 +249,7 @@
   <div class="col-md-6">
   <label for="color"><b>KLEUR</b></label>
   <select id="kleur" name="color" class="form-control">
-  <option selected="selected">Kies</option>
-  <option>Green</option>
+  <option selected="selected">Green</option>
   <option>Blue</option>
   <option>Red</option>
   </select>

@@ -29,7 +29,6 @@ if((newGebruiker.login.length!==0 && newGebruiker.wachtwoord.length!==0)&& newGe
   sHerWachtwoord='';
 });
 
-
 //Validation 
 document.getElementById('logIn').addEventListener('click',function(){
   let sEmail=document.getElementById('modalLRInput10');
@@ -130,6 +129,7 @@ function naarProduct(){
     req.send();
     req.onload=function(){
     let aProducts=JSON.parse(req.responseText);
+    console.log(aProducts)
     let oGekozen=aProducts.find(item=>{
       return item.Title===ProductNaam});
     localStorage.setItem('CurrentProduct',JSON.stringify(oGekozen))
@@ -171,7 +171,7 @@ for(i=0;i<damesarray.length;i++) {
   <div class="card-body">
 
     <!-- Title -->
-    <h4 class="card-title">${damesarray[i].Title}</h4>
+    <h5 class="card-title">${damesarray[i].Title}</h5>
     <!-- Text -->
     <p class="card-text"><b>Prijs:</b>${damesarray[i].prijs}</p>
     <!-- Button -->
@@ -217,7 +217,7 @@ for(i=0;i<mannenarray.length;i++) {
   <div class="card-body">
 
     <!-- Title -->
-    <h4 class="card-title">${mannenarray[i].Title}</h4>
+    <h5 class="card-title">${mannenarray[i].Title}</h5>
     <!-- Text -->
     <p class="card-text"><b>Prijs:</b>${mannenarray[i].prijs}</p>
     <!-- Button -->
@@ -227,10 +227,7 @@ for(i=0;i<mannenarray.length;i++) {
 
 </div>
   `;
-}
-}
-}
-
+}}}
 
 // Zet de producten in de solden.html
 function productCategorySolden() {
@@ -264,7 +261,7 @@ for(i=0;i<soldenarray.length;i++) {
   <div class="card-body">
 
     <!-- Title -->
-    <h4 class="card-title">${soldenarray[i].Title}</h4>
+    <h5 class="card-title">${soldenarray[i].Title}</h5>
     <!-- Text -->
     <p class="card-text"><b>Prijs:</b>${soldenarray[i].prijs}</p>
     <!-- Button -->
@@ -281,11 +278,13 @@ for(i=0;i<soldenarray.length;i++) {
 //Count number of teh products
 function productTel(){
   let winkelMandje=JSON.parse(localStorage.getItem("winkelmandje"))
+  if(winkelMandje){
   let logoWK=document.getElementById('aantalmandje')
   let counter=0
   winkelMandje.forEach(Element=>
   counter+=Element.aantal)
   logoWK.innerHTML=counter;
+  }
 }
 
 
