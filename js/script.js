@@ -24,9 +24,9 @@ if((newGebruiker.login.length!==0 && newGebruiker.wachtwoord.length!==0)&& newGe
    xhr.send(JSON.stringify(newGebruiker));
   }
   sEmail.value='';
-  sGebruikersNaam='';
-  sWachtwoord='';
-  sHerWachtwoord='';
+  sGebruikersNaam.value='';
+  sWachtwoord.value='';
+  sHerWachtwoord.value='';
 });
 
 //Validation 
@@ -120,6 +120,7 @@ function naarProduct(){
         }    
       });
     }
+
 // van index tot Product pagina
 function naarProduct2(){
     var eKnop2=document.getElementById('multi-item2');
@@ -176,9 +177,9 @@ for(i=0;i<damesarray.length;i++) {
     <!-- Title -->
     <h5 class="card-title">${damesarray[i].Title}</h5>
     <!-- Text -->
-    <p class="card-text"><b>Prijs:</b>${damesarray[i].prijs}</p>
+    <p class="card-text"><b>Prijs:</b> € ${damesarray[i].prijs}</p>
     <!-- Button -->
-    <a href="Product.html" id="" class="btn btn-primary">Button</a>
+    <a href="Product.html" id="" class="btn btn-warning">naar artikel</a>
 
   </div>
 
@@ -187,6 +188,7 @@ for(i=0;i<damesarray.length;i++) {
 }
 }
 }
+
 
 // Zet de producten in de mannen.html
 function productCategoryMannen() {
@@ -222,9 +224,9 @@ for(i=0;i<mannenarray.length;i++) {
     <!-- Title -->
     <h5 class="card-title">${mannenarray[i].Title}</h5>
     <!-- Text -->
-    <p class="card-text"><b>Prijs:</b>${mannenarray[i].prijs}</p>
+    <p class="card-text"><b>Prijs:</b> € ${mannenarray[i].prijs}</p>
     <!-- Button -->
-    <a href="Product.html" class="btn btn-primary">Button</a>
+    <a href="Product.html" id="" class="btn btn-warning">naar artikel</a>
 
   </div>
 
@@ -266,9 +268,9 @@ for(i=0;i<soldenarray.length;i++) {
     <!-- Title -->
     <h5 class="card-title">${soldenarray[i].Title}</h5>
     <!-- Text -->
-    <p class="card-text"><b>Prijs:</b>${soldenarray[i].prijs}</p>
+    <p class="card-text"><b>Prijs:</b> € ${soldenarray[i].prijs}</p>
     <!-- Button -->
-    <a href="Product.html" class="btn btn-primary">Button</a>
+    <a href="Product.html" id="" class="btn btn-warning">naar artikel</a>
 
   </div>
 

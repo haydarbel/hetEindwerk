@@ -1,26 +1,24 @@
 
 
-
 .carousel img {
-    position: relative;
     max-height: 400px;
 }
 
 
 #damesimg img {
     width: 500px;
-    height: 420px;
+    height: 400px;
     background-size: cover;
 }
 #herenimg img {
-    height: 420px;
+    height: 440px;
     width: 500px;
     background-size: cover;
     
 }
 
 #herencards {    
-    top: 15px;
+    top: 30px;
 }
 
 #damesdiv {
@@ -197,7 +195,7 @@ width: 47px;}
 
 #dameskarten  {
     
-    top: 50px;
+    top: 30px;
  }
 
  .prijsklas {
@@ -212,3 +210,22 @@ width: 47px;}
  .top-nav-collapse {
     background-color: rgba(255, 165, 0, 0.8);
  }
+.pd-wrap{
+    height: 870px;
+}
+
+.footer1{
+    position: fixed;
+    margin-bottom: 0;
+    width: 100%;
+}
+ #categorieNaam{
+     font-weight: bold;
+     text-align: center;
+     margin-bottom: 50px;
+     margin-top: 30px;
+     font-size: 40px;
+     
+ }
+
+ 

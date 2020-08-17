@@ -56,7 +56,7 @@
    let eProductPrijs=document.getElementById('prijs')
    let eOmschrijving=document.getElementById('omschrijving')
    eProductTitle.innerHTML=Product.Title
-   eProductPrijs.innerHTML=Product.prijs
+   eProductPrijs.innerHTML=" € "+Product.prijs
    eOmschrijving.innerHTML=Product.descriptie
    for(let i=0;i<3;i++){
      let eImg=document.getElementById(`image${i}`)
@@ -147,7 +147,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home
+         <a class="nav-link" href="index.html"><span id="marka">HIBA</span>
           <span class="sr-only">(current)</span>
         </a>
       </li>
@@ -179,10 +179,10 @@
 <!--/.Navbar -->
 
 
-  <div class="pd-wrap">
+ 
     <div class="container">
-    <div class="heading-section">
-    <h2 id="productTitle"class="prodTitle">Product Details</h2>
+    <div class="heading-section p-4">
+    <h2 id="productTitle"class="prodTitle">Productdetails</h2>
     </div>
 
     
@@ -258,13 +258,13 @@
   <label for="size">AANTAL</label>
   <form action="#" class="display-flex">
 
-  <input id="aantal" type="number" name="quantity" min="0" value="1">
+  <input id="aantal" type="number"  class="ml-2"name="quantity" min="0" value="1">
   
   </form>
-  <a href="#"  id='toevoegen' class="round-black-btn">In WinkelMandje</a>
+  <a href="#" id="toevoegen" class="btn btn-success mt-4 waves-effect waves-light ">In Winkelmandje</a>
   </div>
   <!--Benefit Items Begint-->
-<div id="benefititemsProduct" class="container benefit-items product-benefit">
+<div id="benefititems" class="container benefit-items product-benefit mt-5">
   <div class="row">
       <div class="col-md-4">
           <div class="single-benefit">
@@ -306,7 +306,7 @@
   </div>
 </div>
 </div>
-</div>
+
 
 
 
@@ -314,7 +314,7 @@
 
 
 <!-- Footer -->
-<footer class="page-footer font-small special-color-dark pt-4">
+<footer class="footer1 page-footer font-small special-color-dark pt-4">
 
   <!-- Footer Elements -->
   <div class="container">

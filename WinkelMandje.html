@@ -59,27 +59,27 @@
   let kTabel="<table class='table'>\n";
   let totalPrijs=0
       kTabel+="<thead class='black white-text'>";
-      kTabel+='<tr><th scope="col">#</th><th scope="col">afbeelding</th><th scope="col">Productnaam</th><th scope="col">Kledingmaat</th><th scope="col">Kleur</th><th scope="col">Prijs per stuk</th><th scope="col">Aantal</th><th scope="col">Subtotaal</th><th scope="col"></th></tr></thead>'
+      kTabel+='<tr><th scope="col">#</th><th scope="col">Artikel</th><th scope="col">Productnaam</th><th scope="col">Kledingmaat</th><th scope="col">Kleur</th><th scope="col">Prijs per stuk</th><th scope="col">Aantal</th><th scope="col">Subtotaal</th><th scope="col"></th></tr></thead>'
       kTabel+='<tbody id="alleList">'
         for (let i=0; i < winkelMandje.length; i++) {
-          let stukPrijs=parseInt(winkelMandje[i].prijs)*winkelMandje[i].aantal
+          let stukPrijs=winkelMandje[i].prijs*winkelMandje[i].aantal
           kTabel+="<tr class='delete'>"
           kTabel+=`<th scope="row">${i+1}</th>`
           kTabel+= `<td><img src="${winkelMandje[i]["src0"]}" width="100" height="100"></td>`;
           kTabel+= "<td>"+winkelMandje[i]["Title"]+"</td>";
           kTabel+= "<td>"+winkelMandje[i]["maat"]+"</td>";
           kTabel+= "<td>"+winkelMandje[i]["kleur"]+"</td>";
-          kTabel+= "<td>"+winkelMandje[i].prijs+"</td>";
+          kTabel+= "<td>€ "+winkelMandje[i].prijs+"</td>";
           kTabel+="<td><input type='number' name='name' min= 0 value="+winkelMandje[i].aantal+" id='aantal"+[i]+"'/></td>";
-          kTabel+= "<td>"+stukPrijs+"€</td>";
+          kTabel+= "<td>€ "+stukPrijs+"</td>";
           kTabel+= '<td><a id="'+[i]   
           kTabel+= '" class="btn-sm btn-danger">';
           kTabel+= '<i class="fas fa-trash-alt"></i></a></td>';
           totalPrijs+=stukPrijs;
           kTabel+="</tr>\n"
       }
-      kTabel+='<tr><th colspan="3"><span>Total Prijs:'+totalPrijs;
-        kTabel+= "€</span></th>"
+      kTabel+='<tr><th colspan="3"><span>Total Prijs:€ '+totalPrijs;
+        kTabel+= "</span></th>"
         kTabel+='<th></th><th></th><th></th><th></th><th></th><th colspan="6"><button type="button" id="koop"  class="btn btn-success ">Koop Nu</button></th></tr>\n'
         kTabel+="</tbody>\n"
         kTabel+="</table>\n"
@@ -143,13 +143,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home
+        <a class="nav-link" href="index.html"><span id="marka">HIBA</span>
           <span class="sr-only">(current)</span>
         </a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">Categorieen
+          aria-haspopup="true" aria-expanded="false">Categorieën
         </a>
         <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
           <a class="dropdown-item" href="Mannen.html">Heren</a>

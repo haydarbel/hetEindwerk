@@ -7,8 +7,8 @@
       "src0": "img/products/Casual Sweater1.jpg",
       "src1": "img/products/Casual Sweater2.jpg",
       "src2": "img/products/Casual Sweater3.jpg",
-      "prijs": "19€",
-      "descriptie": "Product Vorm:Hoodies Sweatshirts Fit:Tailored Bevestiging:Trui Mouw Lengte:Lange  Binnen Materiaal Samenstelling:Polyester Seizoen:Lente; Herfst"
+      "prijs": "€19",
+      "descriptie": "<br><b>Product Vorm:</b> Hoodies Sweatshirts <br> <b>Fit:</b>Tailored <br> <b>Bevestiging:</b>Trui Mouw <br><b> Lengte:</b>Lange  <br> <b>Binnen Materiaal Samenstelling:</b>Polyester <br> <b>Seizoen:</b>Lente; Herfst"
     },
     {
       "id": 2,
@@ -17,8 +17,8 @@
       "src0": "img/products/Sneakers Vrouwen1.jpg",
       "src1": "img/products/Sneakers Vrouwen2.jpg",
       "src2": "img/products/Sneakers Vrouwen3.jpg",
-      "prijs": "22€",
-      "descriptie": " <b><br>Merknaam:</b>rimocy  <br>  Bovenmateriaal:Mesh(Air mesh) <br>  Afdichtingen:Instappers   <br>Fit:Past qua maat,nemen uw normale grootte   <br>Binnenzool Materiaal:Fabric    <br>Seizoen: Spring/Autumn   <br>Patronen:Solid   <br>Lijnmateriaal:Cotton Fabric "
+      "prijs": "€22",
+      "descriptie": " <br><b>Merknaam:</b>rimocy  <br> <b>Bovenmateriaal:</b>Mesh(Air mesh) <br>  <b>Afdichtingen:</b>Instappers   <br><b>Fit:</b>Past qua maat,nemen uw normale grootte   <br><b>Binnenzool Materiaal:</b>Fabric    <br><b>Seizoen:</b> Spring/Autumn   <br><b>Patronen:</b>Solid   <br><b>Lijnmateriaal:</b>Cotton Fabric "
     },
     {
       "id": 3,
@@ -27,8 +27,8 @@
       "src0": "img/products/Vrouwen Leren Jas1.jpg",
       "src1": "img/products/Vrouwen Leren Jas2.jpg",
       "src2": "img/products/Vrouwen Leren Jas3.jpg",
-      "prijs": "32€",
-      "descriptie": "Afdichtingen:zipper   Stijl:Moto & Biker   Mouwstijl:REGULAR   Mouwlengte(cm):Vol   Buitenkleding:Leather & Suede   Detachable Part:NONE   Clothing Length:REGULAR   Leeftijd:Leeftijden 18-35 Jaar   Geslacht:WOMEN    Season:Autumn"
+      "prijs": "€32",
+      "descriptie": "<br><b>Afdichtingen:</b>zipper   <br><b>Stijl:</b>Moto & Biker   <br><b>Mouwstijl:</b>REGULAR   <br><b>Mouwlengte(cm):</b>Vol   <br><b>Buitenkleding:</b>Leather & Suede   <br><b>Detachable Part:</b>NONE   <br><b>Clothing Length:</b>REGULAR   <br><b>Leeftijd:</b>Leeftijden 18-35 Jaar  <br><b> Geslacht:</b>WOMEN    <br><b>Season:</b>Autumn"
     },
     {
       "id": 4,
@@ -37,8 +37,8 @@
       "src0": "img/products/Vrouwen Elastische Jeans1.jpg",
       "src1": "img/products/Vrouwen Elastische Jeans2.jpg",
       "src2": "img/products/Vrouwen Elastische Jeans3.jpg",
-      "prijs": "15€",
-      "descriptie": "Merknaam:F&JE   Materiaal:COTTON   Lengte:Ankle-Length Pants   Leeftijd:Leeftijden 18-35 Jaar Oud   Aritkeltype:JEANS      Geslacht:WOMEN    Stijl:Casual    Afdichtingen:Elastic   Jeans Style:Harem Pants   Pas:Loose "
+      "prijs": "€15",
+      "descriptie": "<br><b>Merknaam:</b>F&JE   <br><b>Materiaal:</b>COTTON   <br><b>Lengte:</b>Ankle-Length Pants   <br><b>Leeftijd:</b>Leeftijden 18-35 Jaar Oud   <br><b>Aritkeltype:</b>JEANS      <br><b>Geslacht:</b>WOMEN    <br><b>Stijl:</b>Casual    <br><b>Afdichtingen:</b>Elastic   <br><b>Jeans Style:</b>Harem Pants   <br><b>Pas:</b>Loose "
     },
     {
       "id": 5,
@@ -47,8 +47,8 @@
       "src0": "img/products/Mannen Sweatshirt1.jpg",
       "src1": "img/products/Mannen Sweatshirt2.jpg",
       "src2": "img/products/Mannen Sweatshirt3.jpg",
-      "prijs": "13€",
-      "descriptie": "Merknaam:covrlge   Mouwlengte(cm):Vol   Stijl:Casual Clothing   Length:REGULAR   Kraag:Hooded   Afdichtingen:Geen     Hooded:Ja   Dikte:STANDARD   Materiaal:Polyester    Sleeve length:long sleeve S  eason:spring/autumn "
+      "prijs": "€13",
+      "descriptie": "<b><br>Merknaam:</b>covrlge   <b><br>Mouwlengte(cm):</b>Vol   <b><br>Stijl:</b>Casual Clothing   <b><br>Length:</b>REGULAR   <b><br>Kraag:</b>Hooded   <b><br>Afdichtingen:</b>Geen    <b><br>Hooded:</b>Ja   <b><br>Dikte:</b>STANDARD   <b><br>Materiaal:</b>Polyester   <b><br>Sleeve length:</b>long sleeve  <b><br>Season:</b>spring/autumn"
     },
     {
       "id": 6,
@@ -57,8 +57,8 @@
       "src0": "img/products/Mannen Sneakers1.jpg",
       "src1": "img/products/Mannen Sneakers2.jpg",
       "src2": "img/products/Mannen Sneakers3.jpg",
-      "prijs": "26€",
-      "descriptie": "Merknaam:BTMOTTZ   Bovenmateriaal:PU   Materiaal buitenzool:RUBBER    Afdichtingen:Veterschoenen   Fit:Past qua maat, nemen uw normale grootte   Eigenschap:Ademend   Binnenzool Materiaal:RUBBER    Lijnmateriaal:Cotton Fabric   Seizoen:Spring/Autumn"
+      "prijs": "€26",
+      "descriptie": "<b><br>Merknaam:</b>BTMOTTZ   <b><br>Bovenmateriaal:</b>PU   <b><br>Materiaal buitenzool:</b>RUBBER    <b><br>Afdichtingen:</b>Veterschoenen   <b><br>Fit:</b>Past qua maat, nemen uw normale grootte   <b><br>Eigenschap:</b>Ademend   <b><br>Binnenzool Materiaal:</b>RUBBER    <b><br>Lijnmateriaal:</b>Cotton Fabric   <b><br>Seizoen:</b>Spring/Autumn"
     },
     {
       "id": 7,
@@ -67,8 +67,8 @@
       "src0": "img/products/Mannen Lederen Jas1.jpg",
       "src1": "img/products/Mannen Lederen Jas2.jpg",
       "src2": "img/products/Mannen Lederen Jas3.jpg",
-      "prijs": "32€",
-      "descriptie": "Merknaam:TOLOER   Dikte:STANDARD   Hooded:Nee   Materiaal:PU   Stof:Batik   Lijnmateriaal:Polyester   Clothing Length:REGULAR      Type:REGULAR   Kraag:V-neck   Decoratie:Pockets   Afdichtingen:zipper  Mouwlengte(cm):Vol "
+      "prijs": "€32",
+      "descriptie": "<b><br>Merknaam:</b>TOLOER   <b><br>Dikte:</b>STANDARD   <b><br>Hooded:</b>Nee   <b><br>Materiaal:</b>PU   <b><br>Stof:</b>Batik   <b><br>Lijnmateriaal:</b>Polyester   <b><br>Clothing Length:</b>REGULAR      <b><br>Type:</b>REGULAR   <b><br>Kraag:</b>V-neck   <b><br>Decoratie:</b>Pockets   <b><br>Afdichtingen:</b>zipper  <b><br>Mouwlengte(cm):</b>Vol "
     },
     {
       "id": 8,
@@ -77,8 +77,8 @@
       "src0": "img/products/Mannen Korte Broek1.jpg",
       "src1": "img/products/Mannen Korte Broek2.jpg",
       "src2": "img/products/Mannen Korte Broek3.jpg",
-      "prijs": "18€",
-      "descriptie": " <br>Stijl:Casual  <br> Materiaal:COTTON  <br>  Lengte:Knee  <br> LengthMiddel:Mid  <br> Afdichtingen:Elastic Waist <br>  Patronen:Solid <br>  Pant Style:REGULAR"
+      "prijs": "€18",
+      "descriptie": "<b><br>Stijl:</b>Casual   <b><br>Materiaal:</b>COTTON    <b><br>Lengte:</b>Knee   <b><br>LengthMiddel:</b>Mid   <b><br>Afdichtingen:</b>Elastic Waist   <b><br>Patronen:</b>Solid   <b><br>Pant Style:</b>REGULAR"
     },
     {
       "id": 9,
@@ -87,8 +87,8 @@
       "src0": "img/products/Korting Dames Fietsen1.jpg",
       "src1": "img/products/Korting Dames Fietsen2.jpg",
       "src2": "img/products/Korting Dames Fietsen3.jpg",
-      "prijs": "39€",
-      "descriptie": " <br>Materiaal:Polyester  <br> Mouwlengte(cm):Vol <br>  Geslacht:Vrouw   <br> Seizoen:Veer,Summer,Autumn,Winter <br>  Zipper Length:Full Zipper  <br> Fit:Past qua maat, nemen uw normale grootte   Stof:Broadcloth"
+      "prijs": "€39",
+      "descriptie": "<b><br>Materiaal:</b>Polyester   <b><br>Mouwlengte(cm):</b>Vol   <b><br>Geslacht:</b>Vrouw    <b><br>Seizoen:</b>Veer,Summer,Autumn,Winter   <b><br>Zipper Length:</b>Full Zipper   <b><br>Fit:</b>Past qua maat, nemen uw normale grootte   <b><br>Stof:</b>Broadcloth"
     },
     {
       "id": 10,
@@ -97,8 +97,8 @@
       "src0": "img/products/Mannen Joggingbroek1.jpg",
       "src1": "img/products/Mannen Joggingbroek2.jpg",
       "src2": "img/products/Mannen Joggingbroek3.jpg",
-      "prijs": "9€",
-      "descriptie": "<br> Merknaam:ASTFSC  <br> Pant Style:Cargo Pants  <br> Lengte:Ankle-Length Pants <br>  Frontstijl:Platgeplooid <br>  Pas:Loose  <br> Materiaal:COTTON  <br> Geslacht:MEN <br>  Stof:Broadcloth <br>  Afdichtingen:Drawstring"
+      "prijs": "€9",
+      "descriptie": "<b><br>Merknaam:</b>ASTFSC   <b><br>Pant Style:</b>Cargo Pants   <b><br>Lengte:</b>Ankle-Length Pants   <b><br>Frontstijl:</b>Platgeplooid   <b><br>Pas:</b>Loose   <b><br>Materiaal:</b>COTTON   <b><br>Geslacht:</b>MEN   <b><br>Stof:</b>Broadcloth   <b><br>Afdichtingen:</b>Drawstring"
     },
     {
       "id": 11,
@@ -107,11 +107,51 @@
       "src0": "img/products/Dames Sweater1.jpg",
       "src1": "img/products/Dames Sweater2.jpg",
       "src2": "img/products/Dames Sweater3.jpg",
-      "prijs": "20€",
-      "descriptie": "Materiaal:Polyester   Clothing Length:REGULAR   Kraag:Turtleneck   Aritkeltype:Pullovers   Mouwlengte(cm):Vol   Afdichtingen:Geen   Geslacht:WOMEN    codeAge-appropriate:25-29 years old "
+      "prijs": "€20",
+      "descriptie": "<b><br>Materiaal:</b>Polyester   <b><br>Clothing Length:</b>REGULAR   <b><br>Kraag:</b>Turtleneck   <b><br>Aritkeltype:</b>Pullovers   <b><br>Mouwlengte(cm):</b>Vol   <b><br>Afdichtingen:</b>Geen   <b><br>Geslacht:</b>WOMEN    <b><br>codeAge-appropriate:</b>25-29 years old "
     }
   ],
   "Gebruikers": [
+    {
+      "id": 1,
+      "login": "vsa.haydar@gmail.com",
+      "wachtwoord": "vsaHeverlee"
+    },
+    {
+      "id": 2,
+      "login": "vsa.haydar@gmail.com",
+      "wachtwoord": "vsaHeverlee"
+    },
+    {
+      "login": "vsa.haar@gmail.com",
+      "wachtwoord": "vsaHerlee",
+      "id": 3
+    },
+    {
+      "login": "vsa.haydar@live.com",
+      "wachtwoord": "1234",
+      "id": 4
+    },
+    {
+      "login": "aaaa",
+      "wachtwoord": "zzzz",
+      "id": 5
+    },
+    {
+      "login": "haydar@live.com",
+      "wachtwoord": "1234",
+      "id": 6
+    },
+    {
+      "login": "hay",
+      "wachtwoord": "aaa",
+      "id": 8
+    },
+    {
+      "login": "isa",
+      "wachtwoord": "1234",
+      "id": 9
+    },
     {
       "login": "haydar@gmail.com",
       "gebruikersnaam": "haydar",
@@ -125,6 +165,18 @@
       "id": 11
     },
     {
+      "login": "asdfg",
+      "gebruikersnaam": "ihsan",
+      "wachtwoord": "12345",
+      "id": 12
+    },
+    {
+      "login": "ihsan111",
+      "gebruikersnaam": "ihs",
+      "wachtwoord": "12",
+      "id": 13
+    },
+    {
       "login": "ahah",
       "gebruikersnaam": "ab",
       "wachtwoord": "567",
@@ -135,6 +187,30 @@
       "gebruikersnaam": "hay",
       "wachtwoord": "890",
       "id": 15
+    },
+    {
+      "login": "a@a.com",
+      "gebruikersnaam": "a",
+      "wachtwoord": "1",
+      "id": 16
+    },
+    {
+      "login": "a@a.com",
+      "gebruikersnaam": "Brahim",
+      "wachtwoord": "1",
+      "id": 17
+    },
+    {
+      "login": "brahim@g.com",
+      "gebruikersnaam": "Brahim",
+      "wachtwoord": "12",
+      "id": 18
+    },
+    {
+      "login": "michael@gmail.com",
+      "gebruikersnaam": "Michael",
+      "wachtwoord": "123",
+      "id": 19
     }
   ]
 }
