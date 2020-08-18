@@ -82,6 +82,7 @@ document.getElementById('logIn').addEventListener('click',function(){
            </a>
          </li>
      `;
+     window.location.href="Index.html"
    }
 
 // Zet products om start pagina
