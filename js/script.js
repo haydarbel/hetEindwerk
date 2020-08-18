@@ -1,33 +1,47 @@
 
 //Account Aanmaken 
 document.getElementById("signUp").addEventListener('click',function (){
-let sEmail=document.getElementById('modalLRInput12');
-let sGebruikersNaam=document.getElementById('modalLRInput13');
-let sWachtwoord=document.getElementById('modalLRInput14');
-let sHerWachtwoord=document.getElementById('modalLRInput15');
-let url='http://localhost:3000/gebruikers'
-let newGebruiker={
-  login: sEmail.value,
-  gebruikersnaam:sGebruikersNaam.value,
-  wachtwoord:sWachtwoord.value,
-}
-if((newGebruiker.login.length!==0 && newGebruiker.wachtwoord.length!==0)&& newGebruiker.wachtwoord ===sHerWachtwoord.value){
-   const xhr = new XMLHttpRequest();
-   xhr.open('POST', url, true);
-   xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-   xhr.onreadystatechange = () => {
-     if (xhr.readyState === 4 && xhr.status === 201){
-       let serverResponse = JSON.parse(xhr.response);
-       console.log(serverResponse)
-     }
-   };
-   xhr.send(JSON.stringify(newGebruiker));
+  let sEmail=document.getElementById('modalLRInput12');
+  let sGebruikersNaam=document.getElementById('modalLRInput13');
+  let sWachtwoord=document.getElementById('modalLRInput14');
+  let sHerWachtwoord=document.getElementById('modalLRInput15');
+  let url='http://localhost:3000/gebruikers'
+  let newGebruiker={
+    login: sEmail.value,
+    gebruikersnaam:sGebruikersNaam.value,
+    wachtwoord:sWachtwoord.value,
   }
-  sEmail.value='';
-  sGebruikersNaam.value='';
-  sWachtwoord.value='';
-  sHerWachtwoord.value='';
-});
+  let req=new XMLHttpRequest();
+  req.open("GET",url,true);
+  req.send();
+  req.onload=function(){
+  let gebruikers=JSON.parse(req.responseText);
+  console.log(gebruikers);
+  if((newGebruiker.login.length!==0 && newGebruiker.wachtwoord.length!==0)&& newGebruiker.wachtwoord ===sHerWachtwoord.value &&!gebruikers.find(item=>{return item.login==newGebruiker.login})){
+     const xhr = new XMLHttpRequest();
+     xhr.open('POST', url, true);
+     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+     xhr.onreadystatechange = () => {
+       if (xhr.readyState === 4 && xhr.status === 201){
+         let serverResponse = JSON.parse(xhr.response);
+         console.log(serverResponse)
+       }
+     };
+     xhr.send(JSON.stringify(newGebruiker));
+     sEmail.value='';
+     sGebruikersNaam.value='';
+     sWachtwoord.value='';
+     sHerWachtwoord.value='';
+     alert('U hebt een nieuwe account aangemaakt')
+    }else{
+      alert("controleer even uw email of wachtwoord");
+      sEmail.value='';
+      sGebruikersNaam.value='';
+      sWachtwoord.value='';
+      sHerWachtwoord.value='';
+    }
+  }
+  });
 
 //Validation 
 document.getElementById('logIn').addEventListener('click',function(){

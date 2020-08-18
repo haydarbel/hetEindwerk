@@ -21,13 +21,9 @@
     let winkelMandje=JSON.parse(localStorage.getItem("winkelmandje"));
 
     window.onload=function(){
-  
       logInhtml();
-
       tabel()
-      document.getElementById('koop').addEventListener('click',function(){
-        alert("Bedankt voor uw bestelling voor het kiezen van ons")
-      })
+      opnieuw()
     }
    
     function logInhtml() {
@@ -130,6 +126,14 @@
 
  }
 
+function opnieuw(){
+  document.getElementById('koop').addEventListener('click',function(){
+  alert("Bedankt voor uw bestelling voor het kiezen van ons");
+  winkelMandje=[]
+  localStorage.setItem("winkelmandje", JSON.stringify(winkelMandje));
+  window.location.href = 'index.html'
+})
+}
 
  </script>
 </head>
