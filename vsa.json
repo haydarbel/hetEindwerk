@@ -121,160 +121,18 @@
       "descriptie": "<br><b>Merknaam:</b>F&JE   <br><b>Materiaal:</b>COTTON   <br><b>Lengte:</b>Ankle-Length Pants   <br><b>Leeftijd:</b>Leeftijden 18-35 Jaar Oud   <br><b>Aritkeltype:</b>JEANS      <br><b>Geslacht:</b>WOMEN    <br><b>Stijl:</b>Casual    <br><b>Afdichtingen:</b>Elastic   <br><b>Jeans Style:</b>Harem Pants   <br><b>Pas:</b>Loose "
     }
   ],
-  "Gebruikers": [
+  "Gebruikers": [ 
     {
-      "id": 1,
       "login": "vsa.haydar@gmail.com",
-      "wachtwoord": "vsaHeverlee"
-    },
-    {
-      "id": 2,
-      "login": "vsa.haydar@gmail.com",
-      "wachtwoord": "vsaHeverlee"
-    },
-    {
-      "login": "vsa.haar@gmail.com",
-      "wachtwoord": "vsaHerlee",
-      "id": 3
-    },
-    {
-      "login": "vsa.haydar@live.com",
-      "wachtwoord": "1234",
-      "id": 4
-    },
-    {
-      "login": "aaaa",
-      "wachtwoord": "zzzz",
-      "id": 5
-    },
-    {
-      "login": "haydar@live.com",
-      "wachtwoord": "1234",
-      "id": 6
-    },
-    {
-      "login": "hay",
-      "wachtwoord": "aaa",
-      "id": 8
-    },
-    {
-      "login": "isa",
-      "wachtwoord": "1234",
-      "id": 9
-    },
-    {
-      "login": "haydar@gmail.com",
       "gebruikersnaam": "haydar",
-      "wachtwoord": "1234",
-      "id": 10
-    },
-    {
-      "login": "ihsandcn@asf",
-      "gebruikersnaam": "ihsan",
-      "wachtwoord": "asdfg",
-      "id": 11
-    },
-    {
-      "login": "asdfg",
-      "gebruikersnaam": "ihsan",
-      "wachtwoord": "12345",
-      "id": 12
-    },
-    {
-      "login": "ihsan111",
-      "gebruikersnaam": "ihs",
-      "wachtwoord": "12",
-      "id": 13
-    },
-    {
-      "login": "ahah",
-      "gebruikersnaam": "ab",
-      "wachtwoord": "567",
-      "id": 14
-    },
-    {
-      "login": "haydarr@",
-      "gebruikersnaam": "hay",
-      "wachtwoord": "890",
-      "id": 15
-    },
-    {
-      "login": "a@a.com",
-      "gebruikersnaam": "a",
-      "wachtwoord": "1",
-      "id": 16
-    },
-    {
-      "login": "a@a.com",
-      "gebruikersnaam": "Brahim",
-      "wachtwoord": "1",
-      "id": 17
-    },
-    {
-      "login": "brahim@g.com",
-      "gebruikersnaam": "Brahim",
-      "wachtwoord": "12",
-      "id": 18
-    },
-    {
-      "login": "michael@gmail.com",
-      "gebruikersnaam": "Michael",
-      "wachtwoord": "123",
-      "id": 19
-    },
-    {
-      "login": "bilgekoktas@icloud.com",
-      "gebruikersnaam": "bilge",
-      "wachtwoord": "azer",
-      "id": 20
-    },
-    {
-      "login": "ihsandcn@asf",
-      "gebruikersnaam": "ihsan",
-      "wachtwoord": "1234",
-      "id": 21
-    },
-    {
-      "login": "ihsandcn@asf",
-      "gebruikersnaam": "hay",
-      "wachtwoord": "1234",
-      "id": 22
-    },
-    {
-      "login": "ihsandcn@asf",
-      "gebruikersnaam": "ihsan",
-      "wachtwoord": "1234",
-      "id": 23
-    },
-    {
-      "login": "ihsandcn@asf",
-      "gebruikersnaam": "ihsan",
-      "wachtwoord": "1234",
-      "id": 24
-    },
-    {
-      "login": "ihsandcn@asf",
-      "gebruikersnaam": "123",
-      "wachtwoord": "123",
-      "id": 25
-    },
-    {
-      "login": "123",
-      "gebruikersnaam": "123",
-      "wachtwoord": "123",
-      "id": 26
-    },
-    {
-      "login": "12345",
-      "gebruikersnaam": "12345",
-      "wachtwoord": "12345",
-      "id": 27
+      "wachtwoord": "Vsaheverlee",
+      "id": 1
     },
     {
       "login": "michael1@gmail.com",
       "gebruikersnaam": "1234",
       "wachtwoord": "1234",
-      "id": 28
+      "id": 2
     }
   ]
 }
